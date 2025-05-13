@@ -1,6 +1,9 @@
-// page.tsx – Next.js / Tailwind CSS workshop landing page (static‑export friendly)
-
 import Head from "next/head";
+
+const test = true;
+const root_path = test ? '' : '/BinEgo-360';
+const favicon_path = `${root_path}/favicon.ico`
+const sponsor1_path = `${root_path}/allsee-logo.jpg`
 
 export default function Workshop() {
     return (
@@ -14,7 +17,7 @@ export default function Workshop() {
                 />
                 <link
                     rel="icon"
-                    href="/favicon.ico"
+                    href={favicon_path}
                 />
             </Head>
 
@@ -81,7 +84,7 @@ export default function Workshop() {
                 <section className="mx-auto mt-16 max-w-6xl px-4 text-center">
                     <h3 className="text-xl font-semibold text-gray-800">Sponsored by</h3>
                     <div className="mt-6 flex flex-wrap justify-center gap-8">
-                        <a href={'https://www.allsee-tech.com/'} target="_blank" rel="noreferrer"><img src="/allsee-logo.jpg" alt="Sponsor 1" className="h-20 object-contain" /></a>
+                        <a href={'https://www.allsee-tech.com/'} target="_blank" rel="noreferrer"><img src={sponsor1_path} alt="Sponsor 1" className="h-20 object-contain" /></a>
                     </div>
                 </section>
 
@@ -384,7 +387,7 @@ export default function Workshop() {
                         We gratefully acknowledge the generous support of our sponsors.
                     </p>
                     <div className="mt-10 flex flex-wrap justify-center gap-10">
-                        <a href={'https://www.allsee-tech.com/'} target="_blank" rel="noreferrer"><img src="/allsee-logo.jpg" alt="Sponsor 1" className="h-24 object-contain" /></a>
+                        <a href={'https://www.allsee-tech.com/'} target="_blank" rel="noreferrer"><img src={sponsor1_path} alt="Sponsor 1" className="h-24 object-contain" /></a>
                         {/* Add more logos as needed */}
                     </div>
                 </section>
