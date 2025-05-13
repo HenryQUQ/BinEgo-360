@@ -61,7 +61,7 @@ export default function Workshop() {
                     <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
                         Welcome to the <span className="font-semibold text-indigo-600">BinEgo‑360
             Workshop & Challenge</span> at ICCV 2025. We bring together researchers working on
-                        <strong>360° panoramic</strong> and <strong>binocular egocentric</strong> vision to explore
+                        {' '}<strong>360° panoramic</strong> and <strong>binocular egocentric</strong> vision to explore
                         human‑like perception across <em>video</em>, <em>audio</em>, and <em>geo‑spatial</em>
                         modalities.
                     </p>
