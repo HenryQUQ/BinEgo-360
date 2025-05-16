@@ -524,8 +524,8 @@ export default function Workshop() {
                 <section id="prizes" className="mx-auto mt-24 max-w-4xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Prizes & Sponsors</h2>
                     <ul className="mt-6 space-y-2 text-gray-700">
-                        <li><strong>Hardware:</strong> Insta360 X4 panoramic camera</li>
-                        <li><strong>Compute:</strong> 5 000 GPU‑hours on partner cloud</li>
+                        <li><strong>Hardware:</strong> Insta360 X5 panoramic camera</li>
+                        {/*<li><strong>Compute:</strong> 5 000 GPU‑hours on partner cloud</li>*/}
                         <li><strong>Gift:</strong> Amazon / Taobao vouchers</li>
                     </ul>
                     <p className="mt-4 text-gray-700">
