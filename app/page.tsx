@@ -103,6 +103,35 @@ const organizers: Organizer[] = [
     },
 ];
 
+const technical_organizers: Organizer[] = [
+    {
+        name: "Chenyuan Qu",
+        affiliation: "University of Birmingham",
+        img: `${root_path}/organizers/chenyuan.jpg`,
+        link: "https://chenyuanqu.com/",
+    },
+    {
+        name: "Han Hu",
+        affiliation: "University of Birmingham",
+        img: `${root_path}/organizers/han.jpg`,
+        link: "https://scholar.google.com/citations?hl=zh-CN&view_op=list_works&gmla=ALUCkoXDRY1FyBSlDC4q0bpK9zpnxnhaf2PzJqv2dgVESTCALg71TCdFa7PGpFqiTrWvhnZalzAY234KBYkLCs4O7U4&user=UJRtTJ0AAAAJ",
+    },
+    {
+        name: "Qiming Huang",
+        affiliation: "University of Birmingham",
+        img: `${root_path}/organizers/qiming.jpg`,
+        link: "https://qiming-huang.github.io/",
+    },
+    {
+        name: "Hao Chen",
+        affiliation: "University of Cambridge",
+        img: `${root_path}/organizers/hao.jpg`,
+        link: "https://h-chen.com/",
+    }
+];
+
+
+
 
 export default function Workshop() {
     return (
@@ -259,8 +288,26 @@ export default function Workshop() {
                         ))}
                     </div>
                     <p className="mt-8 text-gray-700">
-                        <span className="font-semibold">Technical Committee:</span> Chenyuan Qu, Han Hu, Qiming Huang, Hao Chen
+                        <span className="font-semibold">Technical Committee:</span>
                     </p>
+                    <div className="mt-8 grid gap-8 md:grid-cols-3 lg:grid-cols-4">
+                        {technical_organizers.map((o) => (
+                            <div key={o.name} className="text-center">
+                                <a href={o.link} target="_blank" rel="noreferrer">
+                                    <img
+                                        src={o.img}
+                                        alt={o.name}
+                                        className="mx-auto h-28 w-28 rounded-full object-cover shadow-md hover:shadow-lg"/>
+                                </a>
+                                <h3 className="mt-3 text-base font-semibold text-gray-900">
+                                    <a href={o.link} target="_blank" rel="noreferrer" className="hover:underline">
+                                        {o.name}
+                                    </a>
+                                </h3>
+                                <p className="text-sm text-gray-600">{o.affiliation}</p>
+                            </div>
+                        ))}
+                    </div>
                     <p className="mt-4 text-gray-700">
                         Contact: <a href="mailto:j.jiao@bham.ac.uk" className="text-indigo-600 hover:underline">j.jiao@bham.ac.uk</a>
                     </p>
