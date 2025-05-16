@@ -1,9 +1,108 @@
 import Head from "next/head";
 
-const test = false;
+const test = true;
 const root_path = test ? '' : '/BinEgo-360';
-const favicon_path = `${root_path}/favicon.ico`
-const sponsor1_path = `${root_path}/allsee-logo.jpg`
+/* ─────────────── Static assets ─────────────── */
+const favicon_path = `${root_path}/favicon.ico`;
+const sponsor_allsee_path = `${root_path}/allsee-logo.jpg`;
+const sponsor_insta360_path = `${root_path}/insta360-logo.png`; // add your logo file here
+
+/* ─────────────── Data models ─────────────── */
+interface Speaker {
+    name: string;
+    affiliation: string;
+    img: string;
+    bio: string;
+    link?: string;
+}
+
+const speakers: Speaker[] = [
+    {
+        name: "Addison Lin Wang",
+        affiliation: "Nanyang Technological University",
+        img: `${root_path}/speakers/addison.png`,
+        bio: "Professor Wang is an assistant professor at Nanyang Technological University. He leads the Visual\n" +
+            "Learning and Intelligent Systems Lab, focusing on computer vision, computational photography, and\n" +
+            "deep learning. His expertise in omnidirectional camera-based vision and intelligent systems aligns with\n" +
+            "our workshop’s emphasis on multi-modal scene understanding using panoramic and egocentric data.",
+        link: "https://vlislab22.github.io/vlislab/linwang.html",
+    },
+    {
+        name: "Dima Damen",
+        affiliation: "University of Bristol",
+        img: `${root_path}/speakers/dima.png`,
+        bio: "Professor Damen leads the Machine Learning and Computer Vision Group, focusing on under-\n" +
+            "standing object interactions, actions, and activities using wearable visual sensors. Her expertise in\n" +
+            "egocentric vision and temporal action localization is highly relevant to our workshop’s themes.",
+        link: "https://dimadamen.github.io/",
+    },
+    {
+        name: "Bernard Ghanem",
+        affiliation: "King Abdullah University of Science and Technology",
+        img: `${root_path}/speakers/bernard.jpg`,
+        bio: "Professor Ghanem is a Professor of ECE and CS at King Abdullah University of Science and\n" +
+            "Technology (KAUST) and Chair/Director of the Center of Excellence in Generative AI (GenAI). He\n" +
+            "leads the Image and Video Understanding Lab (IVUL) at KAUST. He leads a local team of the Ego4D\n" +
+            "project, a large-scale egocentric dataset for long-term video understanding. He was an organizer of\n" +
+            "the Annual ActivityNet Large-Scale Activity Recognition Challenge. His expertise in egocentric video\n" +
+            "analysis aligns with our workshop’s focus on multi-modal, multi-view scene understanding and will\n" +
+            "contribute to discussions on advancing egocentric multi-modal learning.",
+        link: "https://www.bernardghanem.com/",
+    },
+];
+
+interface Organizer {
+    name: string;
+    affiliation: string;
+    img: string;
+    link?: string;
+}
+
+const organizers: Organizer[] = [
+    {
+        name: "Jianbo Jiao",
+        affiliation: "University of Birmingham",
+        img: `${root_path}/organizers/jiao.jpg`,
+        link: "https://jianbojiao.com/",
+    },
+    {
+        name: "Shangzhe Wu",
+        affiliation: "University of Cambridge",
+        img: `${root_path}/organizers/wu.jpg`,
+        link: "https://elliottwu.com/",
+    },
+    {
+        name: "Dylan Campbell",
+        affiliation: "Australian National University",
+        img: `${root_path}/organizers/campbell.jpg`,
+        link: "https://sites.google.com/view/djcampbell",
+    },
+    {
+        name: "Yunchao Wei",
+        affiliation: "Beihang University",
+        img: `${root_path}/organizers/wei.jpg`,
+        link: "https://weiyc.github.io/",
+    },
+    {
+        name: "Lu Qi",
+        affiliation: "Insta360",
+        img: `${root_path}/organizers/qi.jpg`,
+        link: "http://luqi.info/",
+    },
+    {
+        name: "Yasmine Mellah",
+        affiliation: "Audioscenic",
+        img: `${root_path}/organizers/mellah.jpg`,
+        link: "https://www.audioscenic.com/",
+    },
+    {
+        name: "Aleš Leonardis",
+        affiliation: "University of Birmingham",
+        img: `${root_path}/organizers/leonardis.jpg`,
+        link: "https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/leonardis-ales",
+    },
+];
+
 
 export default function Workshop() {
     return (
@@ -56,7 +155,7 @@ export default function Workshop() {
                 {/* ───────────────────────────────── Hero ───────────────────────────────── */}
                 <section className="mx-auto max-w-5xl px-4 text-center">
                     <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-                        Binocular Egocentric‑360° Multi‑modal Scene Understanding
+                        BinEgo‑360: Binocular Egocentric‑360° Multi‑modal Scene Understanding
                     </h1>
                     <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
                         Welcome to the <span className="font-semibold text-indigo-600">BinEgo‑360
@@ -78,13 +177,6 @@ export default function Workshop() {
                         >
                             Participate in Challenge
                         </a>
-                    </div>
-                </section>
-
-                <section className="mx-auto mt-16 max-w-6xl px-4 text-center">
-                    <h3 className="text-xl font-semibold text-gray-800">Sponsored by</h3>
-                    <div className="mt-6 flex flex-wrap justify-center gap-8">
-                        <a href={'https://www.allsee-tech.com/'} target="_blank" rel="noreferrer"><img src={sponsor1_path} alt="Sponsor 1" className="h-20 object-contain" /></a>
                     </div>
                 </section>
 
@@ -114,7 +206,7 @@ export default function Workshop() {
                 <section id="papersubmission" className="mx-auto mt-24 max-w-4xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Paper Submission</h2>
                     <p className="mt-6 text-gray-700">
-                        We will invite 4 papers from the ICCV 2025 main conference.
+                        We will invite papers from the ICCV 2025 main conference.
                         papers.
                         All of the papers will be with related research topics to this
                         workshop, and will be reviewed by a program committee consisting of domain experts.
@@ -122,25 +214,52 @@ export default function Workshop() {
                 </section>
 
                 {/* ───────────────────────────────── Speakers ───────────────────────── */}
-                <section id="speakers" className="mx-auto mt-24 max-w-4xl px-4">
+                <section id="speakers" className="mx-auto mt-24 max-w-6xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Invited Speakers</h2>
-                    <ul className="mt-6 space-y-2 text-gray-700">
-                        <li><strong>Addison Lin Wang</strong> – Nanyang Technological University</li>
-                        <li><strong>Dima Damen</strong> – University of Bristol</li>
-                        <li><strong>Bernard Ghanem</strong> – King Abdullah University of Science & Technology</li>
-                    </ul>
+                    <div className="mt-8 grid gap-8 md:grid-cols-3">
+                        {speakers.map((s) => (
+                            <div key={s.name} className="text-center">
+                                <a href={s.link} target="_blank" rel="noreferrer">
+                                    <img
+                                        src={s.img}
+                                        alt={s.name}
+                                        className="mx-auto h-36 w-36 rounded-full object-cover shadow-md hover:shadow-lg"/>
+                                </a>
+                                <h3 className="mt-3 text-lg font-semibold text-gray-900">
+                                    <a href={s.link} target="_blank" rel="noreferrer" className="hover:underline">
+                                        {s.name}
+                                    </a>
+                                </h3>
+                                <p className="text-sm text-gray-600">{s.affiliation}</p>
+                                <p className="mt-2 text-sm text-gray-700">{s.bio}</p>
+                            </div>
+                        ))}
+                    </div>
                 </section>
 
                 {/* ───────────────────────────────── Organizers ───────────────────────── */}
-                <section id="organizers" className="mx-auto mt-24 max-w-4xl px-4">
+                <section id="organizers" className="mx-auto mt-24 max-w-6xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Organizing Committee</h2>
-                    <p className="mt-6 text-gray-700">
-                        <span className="font-semibold">General Chairs:</span> Jianbo Jiao (University of Birmingham), Shangzhe Wu (University of Cambridge),
-                        Dylan Campbell (Australian National University), Yunchao Wei (Beijiao University), Lu Qi (Insta360), Yasmine Mellah (Audioscenic), Aleš Leonardis
-                        (University of Birmingham)
-                    </p>
-                    <p className="mt-4 text-gray-700">
-                        <span className="font-semibold">Technical Committee:</span> Chenyuan Qu, Han Hu, Qiming Huang, Hao Chen
+                    <div className="mt-8 grid gap-8 md:grid-cols-3 lg:grid-cols-4">
+                        {organizers.map((o) => (
+                            <div key={o.name} className="text-center">
+                                <a href={o.link} target="_blank" rel="noreferrer">
+                                    <img
+                                        src={o.img}
+                                        alt={o.name}
+                                        className="mx-auto h-28 w-28 rounded-full object-cover shadow-md hover:shadow-lg"/>
+                                </a>
+                                <h3 className="mt-3 text-base font-semibold text-gray-900">
+                                    <a href={o.link} target="_blank" rel="noreferrer" className="hover:underline">
+                                        {o.name}
+                                    </a>
+                                </h3>
+                                <p className="text-sm text-gray-600">{o.affiliation}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <p className="mt-8 text-gray-700">
+                        <span className="font-semibold">Technical Committee:</span> Chenyuan Qu, Han Hu, Qiming Huang, Hao Chen
                     </p>
                     <p className="mt-4 text-gray-700">
                         Contact: <a href="mailto:j.jiao@bham.ac.uk" className="text-indigo-600 hover:underline">j.jiao@bham.ac.uk</a>
@@ -383,14 +502,17 @@ export default function Workshop() {
 
                 <section id="sponsors" className="mx-auto mt-24 max-w-5xl px-4 text-center">
                     <h2 className="text-3xl font-bold text-gray-900">Sponsors</h2>
-                    <p className="mt-6 text-gray-700">
-                        We gratefully acknowledge the generous support of our sponsors.
-                    </p>
+                    <p className="mt-6 text-gray-700">We gratefully acknowledge the generous support of our sponsors.</p>
                     <div className="mt-10 flex flex-wrap justify-center gap-10">
-                        <a href={'https://www.allsee-tech.com/'} target="_blank" rel="noreferrer"><img src={sponsor1_path} alt="Sponsor 1" className="h-24 object-contain" /></a>
-                        {/* Add more logos as needed */}
+                        <a href="https://www.insta360.com/" target="_blank" rel="noreferrer">
+                            <img src={sponsor_insta360_path} alt="Insta360" className="h-24 object-contain" />
+                        </a>
+                        <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer">
+                            <img src={sponsor_allsee_path} alt="Allsee" className="h-24 object-contain" />
+                        </a>
                     </div>
                 </section>
+
 
                 {/* ───────────────────────────────── Citation ───────────────────────── */}
                 <section className="mx-auto mt-24 max-w-3xl px-4">
