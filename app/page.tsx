@@ -89,12 +89,12 @@ const organizers: Organizer[] = [
         img: `${root_path}/organizers/qi.jpg`,
         link: "http://luqi.info/",
     },
-    {
-        name: "Yasmine Mellah",
-        affiliation: "Audioscenic",
-        img: `${root_path}/organizers/mellah.jpg`,
-        link: "https://www.audioscenic.com/",
-    },
+    // {
+    //     name: "Yasmine Mellah",
+    //     affiliation: "Audioscenic",
+    //     img: `${root_path}/organizers/mellah.jpg`,
+    //     link: "https://www.audioscenic.com/",
+    // },
     {
         name: "Aleš Leonardis",
         affiliation: "University of Birmingham",
