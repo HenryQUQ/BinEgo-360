@@ -416,7 +416,7 @@ export default function Workshop() {
                             <div>
                                 <h3 className="text-xl font-semibold text-indigo-600">1 · Classification</h3>
                                 <p className="mt-2 text-gray-600">
-                                    Predict the scene lable for a whole clip. We follow the scene categories provided in the dataset.
+                                    Predict the scene label for a whole clip. We follow the scene categories provided in the dataset.
                                 </p>
                                 <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-gray-700">
                                     <li><strong>Input</strong>: 360° RGB + egocentric RGB + audio/binaural delay.</li>
