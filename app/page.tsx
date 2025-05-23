@@ -114,7 +114,7 @@ const technical_organizers: Organizer[] = [
         name: "Han Hu",
         affiliation: "University of Birmingham",
         img: `${root_path}/organizers/han.jpg`,
-        link: "https://scholar.google.com/citations?hl=zh-CN&view_op=list_works&gmla=ALUCkoXDRY1FyBSlDC4q0bpK9zpnxnhaf2PzJqv2dgVESTCALg71TCdFa7PGpFqiTrWvhnZalzAY234KBYkLCs4O7U4&user=UJRtTJ0AAAAJ",
+        link: "https://scholar.google.com/Publicationss?hl=zh-CN&view_op=list_works&gmla=ALUCkoXDRY1FyBSlDC4q0bpK9zpnxnhaf2PzJqv2dgVESTCALg71TCdFa7PGpFqiTrWvhnZalzAY234KBYkLCs4O7U4&user=UJRtTJ0AAAAJ",
     },
     {
         name: "Qiming Huang",
@@ -161,7 +161,7 @@ export default function Workshop() {
                         {[
                             ["Home", "#home"],
                             ["Overview", "#overview"],
-                            ["Paper Submission", "#papersubmission"],
+                            ["Call for Papers", "#callforpapers"],
                             ["Speakers", "#speakers"],
                             ["Organizers", "#organizers"],
                             ["Programme", "#programme"],
@@ -195,10 +195,10 @@ export default function Workshop() {
                     </p>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <a
-                            href="#papersubmission"
+                            href="#callforpapers"
                             className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-white shadow hover:bg-indigo-700"
                         >
-                            Paper Submission
+                            Call for Papers
                         </a>
                         <a
                             href="#challenge"
@@ -231,9 +231,9 @@ export default function Workshop() {
                     </ul>
                 </section>
 
-                {/* ───────────────────────────────── Paper Submission ───────────────────────── */}
-                <section id="papersubmission" className="mx-auto mt-24 max-w-4xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Paper Submission</h2>
+                {/* ───────────────────────────────── Call for Papers ───────────────────────── */}
+                <section id="callforpapers" className="mx-auto mt-24 max-w-4xl px-4">
+                    <h2 className="text-3xl font-bold text-gray-900">Call for Papers</h2>
                     <p className="mt-6 text-gray-700">
                         We will invite papers from the ICCV 2025 main conference.
                         papers.
@@ -470,30 +470,30 @@ export default function Workshop() {
                                 </table>
                             </div>
                         </div>
-                        {/* Track 3 */}
-                        <div className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-                            <div>
-                                <h3 className="text-xl font-semibold text-indigo-600">3 · Spatial Object Localization</h3>
-                                <p className="mt-2 text-gray-600">Detect the start and end time of every action instance inside a clip.</p>
-                                <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-gray-700">
-                                    <li><strong>Input</strong>: Same modalities as Track 1</li>
-                                    <li><strong>Output</strong>: JSON output for each detection:<code>{`{"video_id": ..., "t_start": ..., "t_end": ..., "x1": ..., "y1": ..., "x2": ..., "y2": ..., "label": ...}`}</code></li>
-                                    <li><strong>Metric</strong>: mAP averaged over IoU ∈ {`{0.5, 0.75, 0.95}`}.</li>
-                                </ul>
-                            </div>
-                        </div>
+                        {/*/!* Track 3 *!/*/}
+                        {/*<div className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">*/}
+                        {/*    <div>*/}
+                        {/*        <h3 className="text-xl font-semibold text-indigo-600">3 · Spatial Object Localization</h3>*/}
+                        {/*        <p className="mt-2 text-gray-600">Detect the start and end time of every action instance inside a clip.</p>*/}
+                        {/*        <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-gray-700">*/}
+                        {/*            <li><strong>Input</strong>: Same modalities as Track 1</li>*/}
+                        {/*            <li><strong>Output</strong>: JSON output for each detection:<code>{`{"video_id": ..., "t_start": ..., "t_end": ..., "x1": ..., "y1": ..., "x2": ..., "y2": ..., "label": ...}`}</code></li>*/}
+                        {/*            <li><strong>Metric</strong>: mAP averaged over IoU ∈ {`{0.5, 0.75, 0.95}`}.</li>*/}
+                        {/*        </ul>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
                     </div>
                 </section>
 
                 {/* ───────────────────────────────── Timeline ───────────────────────── */}
                 <section id="timeline" className="mx-auto mt-24 max-w-4xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Timeline (UTC)</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">Timeline (Anywhere on Earth)</h2>
                     <ol className="mt-8 border-l-2 border-indigo-600">
                         {[
-                            ["12 May 2025", "Dataset & baselines release; CodaLab opens"],
-                            ["27 Jun 2025 23:59", "Submission deadline"],
-                            ["18 Jul 2025", "Winner slides/posters due"],
-                            ["Sep 2025", "Awards & talks at ICCV 2025 workshop"],
+                            ["26 Jun 2025", "Dataset & baselines release; Kaggle opens"],
+                            ["13 Jul 2025", "Submission deadline"],
+                            ["Sep 2025", "Winner slides/posters due"],
+                            ["19-20 Oct 2025", "Awards & talks at ICCV 2025 workshop"],
                         ].map(([date, desc], i) => (
                             <li key={i} className="relative ml-6 pb-8 last:pb-0">
                                 <span className="absolute -left-3 top-1.5 h-2 w-2 rounded-full bg-indigo-600" />
@@ -508,8 +508,9 @@ export default function Workshop() {
                 <section id="submission" className="mx-auto mt-24 max-w-4xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Submission Rules</h2>
                     <ol className="mt-6 list-decimal space-y-3 pl-6 text-gray-700">
-                        <li>Teams (≤  5 members) register on CodaLab and fill in the team form.</li>
+                        <li>Teams (≤  5 members) register on Kaggle and fill in the team form.</li>
                         <li>Up to <strong>5 submissions per track per team</strong> – the last one counts.</li>
+                        <li>Poster needs to be submitted for the winner.</li>
                         <li>No external data that overlaps with the hidden test clips.</li>
                         <li>Any submission after the deadline will be ignored.</li>
                     </ol>
@@ -561,9 +562,9 @@ export default function Workshop() {
                 </section>
 
 
-                {/* ───────────────────────────────── Citation ───────────────────────── */}
+                {/* ───────────────────────────────── Publications ───────────────────────── */}
                 <section className="mx-auto mt-24 max-w-3xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Citation</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">Publications</h2>
                     <p className="mt-4 text-gray-700">If you use the 360+x dataset or participate in the challenge, please cite:</p>
                     <pre className="mt-4 rounded bg-gray-100 p-4 text-sm leading-tight text-gray-800 overflow-x-auto">
             {`@inproceedings{chen2024x360,
