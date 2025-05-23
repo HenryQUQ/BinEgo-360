@@ -410,7 +410,7 @@ export default function Workshop() {
                 {/* ───────────────────────────────── Challenge Tracks ───────────────────────── */}
                 <section id="tracks" className="mx-auto mt-24 max-w-6xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Challenge Tracks &amp; Baselines</h2>
-                    <div className="mt-10 grid gap-8 md:grid-cols-3">
+                    <div className="mt-10 grid gap-20 md:grid-cols-2">
                         {/* Track 1 */}
                         <div className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
                             <div>
