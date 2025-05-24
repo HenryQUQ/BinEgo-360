@@ -79,7 +79,7 @@ const organizers: Organizer[] = [
     },
     {
         name: "Yunchao Wei",
-        affiliation: "Beihang University",
+        affiliation: "Beijing Jiaotong University",
         img: `${root_path}/organizers/wei.jpg`,
         link: "https://weiyc.github.io/",
     },
@@ -138,10 +138,10 @@ export default function Workshop() {
         <>
             {/* ───────────────────────────────────── <head> meta ───────────────────────────────────── */}
             <Head>
-                <title>BinEgo‑360 Workshop & Challenge @ ICCV 2025</title>
+                <title>Binocular Egocentric-360 Multi-modal Scene Understanding in the Wild</title>
                 <meta
                     name="description"
-                    content="Official site of the BinEgo‑360: Binocular Egocentric‑360° Multi‑modal Scene Understanding Workshop & Challenge at ICCV 2025"
+                    content="Official site of the BinEgo‑360:  Binocular Egocentric-360 Multi-modal Scene Understanding in the Wild"
                 />
                 <link
                     rel="icon"
@@ -161,12 +161,12 @@ export default function Workshop() {
                         {[
                             ["Home", "#home"],
                             ["Overview", "#overview"],
-                            ["Call for Papers", "#callforpapers"],
                             ["Speakers", "#speakers"],
-                            ["Organizers", "#organizers"],
                             ["Programme", "#programme"],
+                            ["Call for Papers", "#callforpapers"],
                             ["Challenge", "#challenge"],
-                            ["Dataset", "#dataset"],
+                            ["Organizers", "#organizers"],
+                            // ["Dataset", "#dataset"],
                             ["Sponsors","#sponsors"]
 
                         ].map(([label, href]) => (
@@ -184,7 +184,7 @@ export default function Workshop() {
                 {/* ───────────────────────────────── Hero ───────────────────────────────── */}
                 <section className="mx-auto max-w-5xl px-4 text-center">
                     <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-                        BinEgo‑360: Binocular Egocentric‑360° Multi‑modal Scene Understanding
+                        BinEgo‑360: Binocular Egocentric-360 Multi-modal Scene Understanding in the Wild
                     </h1>
                     <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
                         Welcome to the <span className="font-semibold text-indigo-600">BinEgo‑360
@@ -217,8 +217,7 @@ export default function Workshop() {
                         This half-day workshop mainly looks at multi-modal scene understanding and perception in a
                         human-like way.
                         Specifically, we will focus on <strong>binocular/stereo</strong> egocentric and <strong>360
-                        panoramic</strong> perspectives, which mea-
-                        sure both first-person views and third-person panoptic views, mimicking a human in the scene, by
+                        panoramic</strong> perspectives, which measure both first-person views and third-person panoptic views, mimicking a human in the scene, by
                         combining with multi‑modal
                         cues such as <em>spatial audio</em>, <em>textual descriptions</em>, and
                         <em>geo‑metadata</em>. This workshop will cover but not be limited to the following topics:
@@ -231,19 +230,10 @@ export default function Workshop() {
                     </ul>
                 </section>
 
-                {/* ───────────────────────────────── Call for Papers ───────────────────────── */}
-                <section id="callforpapers" className="mx-auto mt-24 max-w-4xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Call for Papers</h2>
-                    <p className="mt-6 text-gray-700">
-                        We will invite papers from the ICCV 2025 main conference.
-                        papers.
-                        All of the papers will be with related research topics to this
-                        workshop, and will be reviewed by a program committee consisting of domain experts.
-                    </p>
-                </section>
+
 
                 {/* ───────────────────────────────── Speakers ───────────────────────── */}
-                <section id="speakers" className="mx-auto mt-24 max-w-6xl px-4">
+                <section id="speakers" className="mx-auto mt-24 max-w-4xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Invited Speakers</h2>
                     <div className="mt-8 grid gap-8 md:grid-cols-3">
                         {speakers.map((s) => (
@@ -260,61 +250,16 @@ export default function Workshop() {
                                     </a>
                                 </h3>
                                 <p className="text-sm text-gray-600">{s.affiliation}</p>
-                                <p className="mt-2 text-sm text-gray-700">{s.bio}</p>
+                                {/*<p className="mt-2 text-sm text-gray-700">{s.bio}</p>*/}
                             </div>
                         ))}
                     </div>
                 </section>
 
-                {/* ───────────────────────────────── Organizers ───────────────────────── */}
-                <section id="organizers" className="mx-auto mt-24 max-w-6xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Organizing Committee</h2>
-                    <div className="mt-8 grid gap-8 md:grid-cols-3 lg:grid-cols-4">
-                        {organizers.map((o) => (
-                            <div key={o.name} className="text-center">
-                                <a href={o.link} target="_blank" rel="noreferrer">
-                                    <img
-                                        src={o.img}
-                                        alt={o.name}
-                                        className="mx-auto h-28 w-28 rounded-full object-cover shadow-md hover:shadow-lg"/>
-                                </a>
-                                <h3 className="mt-3 text-base font-semibold text-gray-900">
-                                    <a href={o.link} target="_blank" rel="noreferrer" className="hover:underline">
-                                        {o.name}
-                                    </a>
-                                </h3>
-                                <p className="text-sm text-gray-600">{o.affiliation}</p>
-                            </div>
-                        ))}
-                    </div>
-                    <p className="mt-8 text-gray-700">
-                        <span className="font-semibold">Technical Committee:</span>
-                    </p>
-                    <div className="mt-8 grid gap-8 md:grid-cols-3 lg:grid-cols-4">
-                        {technical_organizers.map((o) => (
-                            <div key={o.name} className="text-center">
-                                <a href={o.link} target="_blank" rel="noreferrer">
-                                    <img
-                                        src={o.img}
-                                        alt={o.name}
-                                        className="mx-auto h-28 w-28 rounded-full object-cover shadow-md hover:shadow-lg"/>
-                                </a>
-                                <h3 className="mt-3 text-base font-semibold text-gray-900">
-                                    <a href={o.link} target="_blank" rel="noreferrer" className="hover:underline">
-                                        {o.name}
-                                    </a>
-                                </h3>
-                                <p className="text-sm text-gray-600">{o.affiliation}</p>
-                            </div>
-                        ))}
-                    </div>
-                    <p className="mt-4 text-gray-700">
-                        Contact: <a href="mailto:j.jiao@bham.ac.uk" className="text-indigo-600 hover:underline">j.jiao@bham.ac.uk</a>
-                    </p>
-                </section>
+
 
                 {/* ───────────────────────────────── Programme ───────────────────────── */}
-                <section id="programme" className="mx-auto mt-24 max-w-5xl px-4">
+                <section id="programme" className="mx-auto mt-24 max-w-4xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Workshop Programme (Half‑day)</h2>
                     <div className="mt-6 overflow-x-auto">
                         <table className="w-full min-w-[480px] divide-y divide-gray-200 text-left text-sm text-gray-700">
@@ -326,13 +271,14 @@ export default function Workshop() {
                             </thead>
                             <tbody>
                             {[
-                                ["09:00 – 09:30", "Opening & dataset overview"],
-                                ["09:30 – 10:05", "Keynote 1 – Addison Lin Wang"],
-                                ["10:05 – 10:40", "Keynote 2 – Dima Damen"],
-                                ["10:40 – 11:00", "Coffee break & poster session"],
-                                ["11:00 – 11:45", "Invited paper talks ×3"],
-                                ["11:45 – 12:20", "Keynote 3 – Bernard Ghanem"],
-                                ["12:20 – 12:35", "Awards & closing"],
+                                ["09:00 – 09:30", "Opening remarks & presentation of the 360+x dataset/challenge"],
+                                ["09:30 – 10:05", "Keynote 1"],
+                                ["10:05 – 10:40", "Keynote 2"],
+                                ["10:40 – 11:00", "Break & poster session"],
+                                ["11:00 – 11:45", "Invited paper prensentation (15min ×3)"],
+                                ["11:45 – 12:20", "Keynote 3"],
+                                ["12:20 – 12:35", "Awards ceremony"],
+                                ["12:35 - PM", "Poster seesion (cont.) if allowed"]
                             ].map(([time, event], i) => (
                                 <tr key={i} className="odd:bg-white even:bg-gray-50">
                                     <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{time}</td>
@@ -344,18 +290,28 @@ export default function Workshop() {
                     </div>
                 </section>
 
-                {/* ───────────────────────────────── Challenge (inherits existing) ───────────── */}
+                {/* ───────────────────────────────── Call for Papers ───────────────────────── */}
+                <section id="callforpapers" className="mx-auto mt-24 max-w-6xl px-4">
+                    <h2 className="text-3xl font-bold text-gray-900">Call for Papers</h2>
+                    <p className="mt-6 text-gray-700">
+                        We will invite papers from the ICCV 2025 main conference. All of the papers will be with related research topics to this workshop, and will be reviewed by a program committee consisting of domain experts.  If you are interested in presenting your work at our workshop, please fill in this form
+                    </p>
+                </section>
+
+                {/* ───────────────────────────────── Challenge ───────────── */}
                 <section id="challenge" className="mx-auto mt-24 max-w-6xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">BinEgo‑360 Challenge</h2>
                     <p className="mt-6 text-gray-700">
-                        The challenge uses the public <a
+
+                        The challenge uses our public dataset  <a
                         href="https://x360dataset.github.io/"
                         target="_blank" rel="noreferrer"
                         className="underline"
-                    >360+x</a> dataset for training/validation and <strong>30 hidden videos</strong> for the
-                        final test set. Three tracks open on <strong>26 Apr 2025</strong>:
+                    >360+x</a> for training/validation, and a held-out test set for the evaluation. For more details about the dataset, tracks, timeline, and submission rules, please see below:
+
                     </p>
                 </section>
+
 
                 {/* ───────────────────────────────── Dataset Overview ───────────────────────── */}
                 <section id="dataset" className="mx-auto mt-24 max-w-6xl px-4">
@@ -408,7 +364,7 @@ export default function Workshop() {
                 </section>
 
                 {/* ───────────────────────────────── Challenge Tracks ───────────────────────── */}
-                <section id="tracks" className="mx-auto mt-24 max-w-6xl px-4">
+                <section id="tracks" className="mx-auto mt-24 max-w-4xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Challenge Tracks &amp; Baselines</h2>
                     <div className="mt-10 grid gap-20 md:grid-cols-2">
                         {/* Track 1 */}
@@ -510,9 +466,9 @@ export default function Workshop() {
                     <ol className="mt-6 list-decimal space-y-3 pl-6 text-gray-700">
                         <li>Teams (≤  5 members) register on Kaggle and fill in the team form.</li>
                         <li>Up to <strong>5 submissions per track per team</strong> – the last one counts.</li>
-                        <li>Poster needs to be submitted for the winner.</li>
+                        <li>The winners need to submit a technical report and a poster to be presented at the workshop</li>
                         <li>No external data that overlaps with the hidden test clips.</li>
-                        <li>Any submission after the deadline will be ignored.</li>
+                        <li>Any submission after the deadline will not be considered.</li>
                     </ol>
                 </section>
 
@@ -561,10 +517,58 @@ export default function Workshop() {
                     </div>
                 </section>
 
+                {/* ───────────────────────────────── Organizers ───────────────────────── */}
+                <section id="organizers" className="mx-auto mt-24 max-w-4xl px-4">
+                    <h2 className="text-3xl font-bold text-gray-900">Organising Committee</h2>
+                    <div className="mt-8 grid gap-8 md:grid-cols-3 lg:grid-cols-4">
+                        {organizers.map((o) => (
+                            <div key={o.name} className="text-center">
+                                <a href={o.link} target="_blank" rel="noreferrer">
+                                    <img
+                                        src={o.img}
+                                        alt={o.name}
+                                        className="mx-auto h-28 w-28 rounded-full object-cover shadow-md hover:shadow-lg"/>
+                                </a>
+                                <h3 className="mt-3 text-base font-semibold text-gray-900">
+                                    <a href={o.link} target="_blank" rel="noreferrer" className="hover:underline">
+                                        {o.name}
+                                    </a>
+                                </h3>
+                                <p className="text-sm text-gray-600">{o.affiliation}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <p className="mt-8 text-gray-700">
+                        <span className="font-semibold">Technical Committee:</span>
+                    </p>
+                    <div className="mt-8 grid gap-8 md:grid-cols-3 lg:grid-cols-4">
+                        {technical_organizers.map((o) => (
+                            <div key={o.name} className="text-center">
+                                <a href={o.link} target="_blank" rel="noreferrer">
+                                    <img
+                                        src={o.img}
+                                        alt={o.name}
+                                        className="mx-auto h-28 w-28 rounded-full object-cover shadow-md hover:shadow-lg"/>
+                                </a>
+                                <h3 className="mt-3 text-base font-semibold text-gray-900">
+                                    <a href={o.link} target="_blank" rel="noreferrer" className="hover:underline">
+                                        {o.name}
+                                    </a>
+                                </h3>
+                                <p className="text-sm text-gray-600">{o.affiliation}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <p className="mt-4 text-gray-700">
+                        Contact: <a href="mailto:j.jiao@bham.ac.uk" className="text-indigo-600 hover:underline">j.jiao@bham.ac.uk</a>
+                    </p>
+                </section>
+
+
 
                 {/* ───────────────────────────────── Publications ───────────────────────── */}
                 <section className="mx-auto mt-24 max-w-3xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Publications</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">Publication(s)</h2>
                     <p className="mt-4 text-gray-700">If you use the 360+x dataset or participate in the challenge, please cite:</p>
                     <pre className="mt-4 rounded bg-gray-100 p-4 text-sm leading-tight text-gray-800 overflow-x-auto">
             {`@inproceedings{chen2024x360,
