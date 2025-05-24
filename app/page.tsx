@@ -7,6 +7,10 @@ const favicon_path = `${root_path}/favicon.ico`;
 const sponsor_allsee_path = `${root_path}/allsee-logo.jpg`;
 const sponsor_insta360_path = `${root_path}/insta360-logo.png`; // add your logo file here
 
+
+const google_form_url = "";
+const kaggle_comp_url = "";
+
 /* ─────────────── Data models ─────────────── */
 interface Speaker {
     name: string;
@@ -234,7 +238,7 @@ export default function Workshop() {
 
                 {/* ───────────────────────────────── Speakers ───────────────────────── */}
                 <section id="speakers" className="mx-auto mt-24 max-w-4xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Invited Speakers</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">Keynote Speakers</h2>
                     <div className="mt-8 grid gap-8 md:grid-cols-3">
                         {speakers.map((s) => (
                             <div key={s.name} className="text-center">
@@ -271,14 +275,13 @@ export default function Workshop() {
                             </thead>
                             <tbody>
                             {[
-                                ["09:00 – 09:30", "Opening remarks & presentation of the 360+x dataset/challenge"],
-                                ["09:30 – 10:05", "Keynote 1"],
-                                ["10:05 – 10:40", "Keynote 2"],
-                                ["10:40 – 11:00", "Break & poster session"],
-                                ["11:00 – 11:45", "Invited paper prensentation (15min ×3)"],
-                                ["11:45 – 12:20", "Keynote 3"],
-                                ["12:20 – 12:35", "Awards ceremony"],
-                                ["12:35 - PM", "Poster seesion (cont.) if allowed"]
+                                ["09:00 – 09:30", "Opening Remarks"],
+                                ["09:30 – 10:05", "Keynote Talk 1"],
+                                ["10:05 – 10:40", "Keynote Talk 2"],
+                                ["10:40 – 11:00", "Break & Poster Session"],
+                                ["11:00 – 11:45", "Invited paper Presentations (×3)"],
+                                ["11:45 – 12:20", "Keynote Talk 3"],
+                                ["12:20 – 12:35", "Awards Ceremony & Concluding Remarks"],
                             ].map(([time, event], i) => (
                                 <tr key={i} className="odd:bg-white even:bg-gray-50">
                                     <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{time}</td>
@@ -294,8 +297,27 @@ export default function Workshop() {
                 <section id="callforpapers" className="mx-auto mt-24 max-w-6xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Call for Papers</h2>
                     <p className="mt-6 text-gray-700">
-                        We will invite papers from the ICCV 2025 main conference. All of the papers will be with related research topics to this workshop, and will be reviewed by a program committee consisting of domain experts.  If you are interested in presenting your work at our workshop, please fill in this form
+                        We will invite papers from the ICCV 2025 main conference. All of the papers will be with related
+                        research topics to this workshop, and will be reviewed by a program committee consisting of
+                        domain experts. If you are interested in presenting your work at our workshop, please fill in
+                        this form:
                     </p>
+                    <div className="mt-8 text-center">
+                        <a
+                            href={google_form_url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3
+               text-white shadow hover:bg-indigo-700 transition"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                 className="h-5 w-5" fill="currentColor">
+                                <path
+                                    d="M3.514 11.112l15.665-8.79a1 1 0 011.467 1.049l-2.65 18.94a1 1 0 01-1.71.59l-4.657-5.147-4.858 3.48a.75.75 0 01-1.144-.523L2.17 12.73a1 1 0 01.344-1.618z"/>
+                            </svg>
+                            Submit via&nbsp;Google&nbsp;Form
+                        </a>
+                    </div>
                 </section>
 
                 {/* ───────────────────────────────── Challenge ───────────── */}
@@ -303,13 +325,31 @@ export default function Workshop() {
                     <h2 className="text-3xl font-bold text-gray-900">BinEgo‑360 Challenge</h2>
                     <p className="mt-6 text-gray-700">
 
-                        The challenge uses our public dataset  <a
+                        The challenge uses our public dataset <a
                         href="https://x360dataset.github.io/"
                         target="_blank" rel="noreferrer"
                         className="underline"
-                    >360+x</a> for training/validation, and a held-out test set for the evaluation. For more details about the dataset, tracks, timeline, and submission rules, please see below:
+                    >360+x</a> for training/validation, and a held-out test set for the evaluation. For more details
+                        about the dataset, tracks, timeline, and submission rules, please see below:
 
                     </p>
+
+                    <div className="mt-8 text-center">
+                        <a
+                            href={kaggle_comp_url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-6 py-3
+               text-white shadow hover:bg-sky-600 transition"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                 className="h-5 w-5" fill="currentColor">
+                                <path
+                                    d="M4 4h4v7.586l8.293-8.293 2.414 2.414L10.414 14l8.293 8.293-2.414 2.414L8 16.414V24H4V4z"/>
+                            </svg>
+                            Join&nbsp;on&nbsp;Kaggle
+                        </a>
+                    </div>
                 </section>
 
 
@@ -503,23 +543,9 @@ export default function Workshop() {
                 </section>
 
 
-
-                <section id="sponsors" className="mx-auto mt-24 max-w-5xl px-4 text-center">
-                    <h2 className="text-3xl font-bold text-gray-900">Sponsors</h2>
-                    <p className="mt-6 text-gray-700">We gratefully acknowledge the generous support of our sponsors.</p>
-                    <div className="mt-10 flex flex-wrap justify-center gap-10">
-                        <a href="https://www.insta360.com/" target="_blank" rel="noreferrer">
-                            <img src={sponsor_insta360_path} alt="Insta360" className="h-24 object-contain" />
-                        </a>
-                        <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer">
-                            <img src={sponsor_allsee_path} alt="Allsee" className="h-24 object-contain" />
-                        </a>
-                    </div>
-                </section>
-
                 {/* ───────────────────────────────── Organizers ───────────────────────── */}
                 <section id="organizers" className="mx-auto mt-24 max-w-4xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Organising Committee</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">Organisers</h2>
                     <div className="mt-8 grid gap-8 md:grid-cols-3 lg:grid-cols-4">
                         {organizers.map((o) => (
                             <div key={o.name} className="text-center">
@@ -563,6 +589,21 @@ export default function Workshop() {
                         Contact: <a href="mailto:j.jiao@bham.ac.uk" className="text-indigo-600 hover:underline">j.jiao@bham.ac.uk</a>
                     </p>
                 </section>
+
+                <section id="sponsors" className="mx-auto mt-24 max-w-5xl px-4 text-center">
+                    <h2 className="text-3xl font-bold text-gray-900">Sponsors</h2>
+                    <p className="mt-6 text-gray-700">We gratefully acknowledge the generous support of our sponsors.</p>
+                    <div className="mt-10 flex flex-wrap justify-center gap-10">
+                        <a href="https://www.insta360.com/" target="_blank" rel="noreferrer">
+                            <img src={sponsor_insta360_path} alt="Insta360" className="h-24 object-contain" />
+                        </a>
+                        <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer">
+                            <img src={sponsor_allsee_path} alt="Allsee" className="h-24 object-contain" />
+                        </a>
+                    </div>
+                </section>
+
+
 
 
 
