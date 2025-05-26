@@ -11,6 +11,9 @@ const sponsor_insta360_path = `${root_path}/insta360-logo.png`; // add your logo
 const google_form_url = "";
 const kaggle_comp_url = "";
 
+const iccv_logo_path         = `${root_path}/iccv-hawaii-logo.svg`;
+const hero_bg_path           = `${root_path}/hawaii-hero.jpg`;
+
 /* ─────────────── Data models ─────────────── */
 interface Speaker {
     name: string;
@@ -155,6 +158,31 @@ export default function Workshop() {
 
             {/* ───────────────────────────────────── Navbar ───────────────────────────────────── */}
             <header className="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+                <div className="flex items-center gap-6 bg-gray-800 px-4 py-1 text-xs text-gray-100">
+                    <div className="flex items-center gap-1">
+                        <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 112.5-2.5 2.503 2.503 0 01-2.5 2.5z"/>
+                        </svg>
+                        Hawaii Convention Center, Honolulu HI, USA
+                    </div>
+                    <div className="flex items-center gap-1">
+                        <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17 12a5 5 0 01-5 5v5h-3v-5a5 5 0 110-10V2h3v5a5 5 0 015 5z"/>
+                        </svg>
+                        19 – 23 Oct, 2025
+                    </div>
+                    <a href="mailto:j.jiao@bham.ac.uk" className="hover:underline">
+                        j.jiao@bham.ac.uk
+                    </a>
+
+                    <div className="ml-auto flex gap-2">
+                        <a href="#challenge"
+                           className="rounded bg-indigo-600 px-3 py-1 text-white hover:bg-indigo-700">Competitions</a>
+                        <a href="#submission" className="rounded bg-sky-600 px-3 py-1 text-white hover:bg-sky-700">Submission
+                            Portal</a>
+                    </div>
+                </div>
                 <nav
                     className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 text-sm font-medium text-gray-700">
                     <div className="flex items-center gap-2 text-base font-semibold">
@@ -171,7 +199,7 @@ export default function Workshop() {
                             ["Challenge", "#challenge"],
                             ["Organizers", "#organizers"],
                             // ["Dataset", "#dataset"],
-                            ["Sponsors","#sponsors"]
+                            ["Sponsors", "#sponsors"]
 
                         ].map(([label, href]) => (
                             <li key={href}>
@@ -186,30 +214,46 @@ export default function Workshop() {
 
             <main id="home" className="pt-24 pb-16">
                 {/* ───────────────────────────────── Hero ───────────────────────────────── */}
-                <section className="mx-auto max-w-5xl px-4 text-center">
-                    <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-                        BinEgo‑360: Binocular Egocentric-360 Multi-modal Scene Understanding in the Wild
-                    </h1>
-                    <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
-                        Welcome to the <span className="font-semibold text-indigo-600">BinEgo‑360
+                <section
+                    className="relative flex items-center justify-center text-center min-h-[540px] bg-cover bg-center bg-no-repeat"
+                    style={{backgroundImage: `url(${hero_bg_path})`}}
+                >
+                    <div className="absolute inset-0 bg-black/60"/>
+
+                    {/* 内容层 */}
+                    <div className="relative z-10 mx-auto max-w-5xl px-4">
+
+                        {/* ➌ NEW: ICCV Hawaii logo */}
+                        <img
+                            src={iccv_logo_path}
+                            alt="ICCV 2025 Honolulu Hawaii"
+                            className="mx-auto mb-6 h-20 w-auto"
+                        />
+                        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
+                            BinEgo‑360: Binocular Egocentric-360 Multi-modal Scene Understanding in the Wild
+                        </h1>
+                        <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200">
+                            Welcome to the <span className="font-semibold text-indigo-600">BinEgo‑360
             Workshop & Challenge</span> at ICCV 2025. We bring together researchers working on
-                        {' '}<strong>360° panoramic</strong> and <strong>binocular egocentric</strong> vision to explore
-                        human‑like perception across <em>video</em>, <em>audio</em>, and <em>geo‑spatial</em>
-                        modalities.
-                    </p>
-                    <div className="mt-8 flex flex-wrap justify-center gap-4">
-                        <a
-                            href="#callforpapers"
-                            className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-white shadow hover:bg-indigo-700"
-                        >
-                            Call for Papers
-                        </a>
-                        <a
-                            href="#challenge"
-                            className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-3 text-gray-700 shadow hover:border-gray-400"
-                        >
-                            Participate in Challenge
-                        </a>
+                            {' '}<strong>360° panoramic</strong> and <strong>binocular egocentric</strong> vision to
+                            explore
+                            human‑like perception across <em>video</em>, <em>audio</em>, and <em>geo‑spatial</em>
+                            modalities.
+                        </p>
+                        <div className="mt-8 flex flex-wrap justify-center gap-4">
+                            <a
+                                href="#callforpapers"
+                                className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-white shadow hover:bg-amber-600"
+                            >
+                                Call for Papers
+                            </a>
+                            <a
+                                href="#challenge"
+                                className="inline-flex items-center gap-2 rounded-lg bg-white/80 px-6 py-3 text-gray-900 shadow hover:bg-white"
+                            >
+                                Participate in Challenge
+                            </a>
+                        </div>
                     </div>
                 </section>
 
