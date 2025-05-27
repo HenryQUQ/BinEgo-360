@@ -170,7 +170,7 @@ export default function Workshop() {
                         <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17 12a5 5 0 01-5 5v5h-3v-5a5 5 0 110-10V2h3v5a5 5 0 015 5z"/>
                         </svg>
-                        19 – 23 Oct, 2025
+                        19 – 20 Oct, 2025
                     </div>
                     <a href="mailto:j.jiao@bham.ac.uk" className="hover:underline">
                         j.jiao@bham.ac.uk
