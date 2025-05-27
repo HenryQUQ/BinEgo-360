@@ -145,10 +145,10 @@ export default function Workshop() {
         <>
             {/* ───────────────────────────────────── <head> meta ───────────────────────────────────── */}
             <Head>
-                <title>Binocular Egocentric-360 Multi-modal Scene Understanding in the Wild</title>
+                <title>Binocular Egocentric-360° Multi-modal Scene Understanding in the Wild</title>
                 <meta
                     name="description"
-                    content="Official site of the BinEgo‑360:  Binocular Egocentric-360 Multi-modal Scene Understanding in the Wild"
+                    content="Official site of the BinEgo‑360°:  Binocular Egocentric-360° Multi-modal Scene Understanding in the Wild"
                 />
                 <link
                     rel="icon"
@@ -186,7 +186,7 @@ export default function Workshop() {
                 <nav
                     className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 text-sm font-medium text-gray-700">
                     <div className="flex items-center gap-2 text-base font-semibold">
-                        <span className="text-indigo-600">BinEgo‑360</span>
+                        <span className="text-indigo-600">BinEgo‑360°</span>
                         <span>Workshop @ ICCV 2025</span>
                     </div>
                     <ul className="hidden gap-6 md:flex">
@@ -230,14 +230,14 @@ export default function Workshop() {
                             className="mx-auto mb-6 h-20 w-auto"
                         />
                         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
-                            BinEgo‑360: Binocular Egocentric-360 Multi-modal Scene Understanding in the Wild
+                            BinEgo‑360°: Binocular Egocentric-360° Multi-modal Scene Understanding in the Wild
                         </h1>
                         <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200">
-                            Welcome to the <span className="font-semibold text-indigo-600">BinEgo‑360
+                            Welcome to the <span className="font-semibold text-indigo-200">BinEgo‑360°
             Workshop & Challenge</span> at ICCV 2025. We bring together researchers working on
                             {' '}<strong>360° panoramic</strong> and <strong>binocular egocentric</strong> vision to
                             explore
-                            human‑like perception across <em>video</em>, <em>audio</em>, and <em>geo‑spatial</em>
+                            human‑like perception across <em>video</em>, <em>audio</em>, and <em>geo‑spatial</em>{' '}
                             modalities.
                         </p>
                         <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -264,10 +264,10 @@ export default function Workshop() {
 
                         This half-day workshop mainly looks at multi-modal scene understanding and perception in a
                         human-like way.
-                        Specifically, we will focus on <strong>binocular/stereo</strong> egocentric and <strong>360
+                        Specifically, we will focus on <strong>binocular/stereo</strong> egocentric and <strong>360°
                         panoramic</strong> perspectives, which measure both first-person views and third-person panoptic views, mimicking a human in the scene, by
                         combining with multi‑modal
-                        cues such as <em>spatial audio</em>, <em>textual descriptions</em>, and
+                        cues such as <em>spatial audio</em>, <em>textual descriptions</em>, and{' '}
                         <em>geo‑metadata</em>. This workshop will cover but not be limited to the following topics:
                     </p>
                     <ul className="mt-4 list-disc space-y-2 pl-6 text-gray-700">
@@ -342,9 +342,7 @@ export default function Workshop() {
                     <h2 className="text-3xl font-bold text-gray-900">Call for Papers</h2>
                     <p className="mt-6 text-gray-700">
                         We will invite papers from the ICCV 2025 main conference. All of the papers will be with related
-                        research topics to this workshop, and will be reviewed by a program committee consisting of
-                        domain experts. If you are interested in presenting your work at our workshop, please fill in
-                        this form:
+                        research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline July 13th):
                     </p>
                     <div className="mt-8 text-center">
                         <a
@@ -366,7 +364,7 @@ export default function Workshop() {
 
                 {/* ───────────────────────────────── Challenge ───────────── */}
                 <section id="challenge" className="mx-auto mt-24 max-w-6xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">BinEgo‑360 Challenge</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">BinEgo‑360° Challenge</h2>
                     <p className="mt-6 text-gray-700">
 
                         The challenge uses our public dataset <a
@@ -378,22 +376,22 @@ export default function Workshop() {
 
                     </p>
 
-                    <div className="mt-8 text-center">
-                        <a
-                            href={kaggle_comp_url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-6 py-3
-               text-white shadow hover:bg-sky-600 transition"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                 className="h-5 w-5" fill="currentColor">
-                                <path
-                                    d="M4 4h4v7.586l8.293-8.293 2.414 2.414L10.414 14l8.293 8.293-2.414 2.414L8 16.414V24H4V4z"/>
-                            </svg>
-                            Join&nbsp;on&nbsp;Kaggle
-                        </a>
-                    </div>
+               {/*     <div className="mt-8 text-center">*/}
+               {/*         <a*/}
+               {/*             href={kaggle_comp_url}*/}
+               {/*             target="_blank"*/}
+               {/*             rel="noreferrer"*/}
+               {/*             className="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-6 py-3*/}
+               {/*text-white shadow hover:bg-sky-600 transition"*/}
+               {/*         >*/}
+               {/*             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"*/}
+               {/*                  className="h-5 w-5" fill="currentColor">*/}
+               {/*                 <path*/}
+               {/*                     d="M4 4h4v7.586l8.293-8.293 2.414 2.414L10.414 14l8.293 8.293-2.414 2.414L8 16.414V24H4V4z"/>*/}
+               {/*             </svg>*/}
+               {/*             Join&nbsp;on&nbsp;Kaggle*/}
+               {/*         </a>*/}
+               {/*     </div>*/}
                 </section>
 
 
@@ -452,11 +450,13 @@ export default function Workshop() {
                     <h2 className="text-3xl font-bold text-gray-900">Challenge Tracks &amp; Baselines</h2>
                     <div className="mt-10 grid gap-20 md:grid-cols-2">
                         {/* Track 1 */}
-                        <div className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+                        <div
+                            className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
                             <div>
                                 <h3 className="text-xl font-semibold text-indigo-600">1 · Classification</h3>
                                 <p className="mt-2 text-gray-600">
-                                    Predict the scene label for a whole clip. We follow the scene categories provided in the dataset.
+                                    Predict the scene label for a whole clip. We follow the scene categories provided in
+                                    the dataset.
                                 </p>
                                 <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-gray-700">
                                     <li><strong>Input</strong>: 360° RGB + egocentric RGB + audio/binaural delay.</li>
@@ -468,21 +468,44 @@ export default function Workshop() {
                                 <p className="font-medium">Baseline (All views and modalities use)</p>
                                 <p>Top‑1 Acc: <span className="font-semibold">80.62  %</span></p>
                             </div>
+
+                            <div className="mt-8 text-center">
+                                <a
+                                    href={kaggle_comp_url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-6 py-3
+               text-white shadow hover:bg-sky-600 transition"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                         className="h-5 w-5" fill="currentColor">
+                                        <path
+                                            d="M4 4h4v7.586l8.293-8.293 2.414 2.414L10.414 14l8.293 8.293-2.414 2.414L8 16.414V24H4V4z"/>
+                                    </svg>
+                                    Join&nbsp;on&nbsp;Kaggle
+                                </a>
+                            </div>
                         </div>
                         {/* Track 2 */}
-                        <div className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+                        <div
+                            className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
                             <div>
-                                <h3 className="text-xl font-semibold text-indigo-600">2 · Temporal Action Localization</h3>
-                                <p className="mt-2 text-gray-600">Detect the start and end time of every action instance inside a clip.</p>
+                                <h3 className="text-xl font-semibold text-indigo-600">2 · Temporal Action
+                                    Localization</h3>
+                                <p className="mt-2 text-gray-600">Detect the start and end time of every action instance
+                                    inside a clip.</p>
                                 <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-gray-700">
                                     <li><strong>Input</strong>: Same modalities as Track 1</li>
-                                    <li><strong>Output</strong>: JSON output for each detection:<code>{`{"video_id": ..., "t_start": ..., "t_end": ..., "label": ...}`}</code></li>
+                                    <li><strong>Output</strong>: JSON output for each
+                                        detection:<code>{`{"video_id": ..., "t_start": ..., "t_end": ..., "label": ...}`}</code>
+                                    </li>
                                     <li><strong>Metric</strong>: mAP averaged over IoU ∈ {`{0.5, 0.75, 0.95}`}.</li>
                                 </ul>
                             </div>
                             <div className="mt-6 rounded bg-gray-50 p-4 text-sm">
-                                <p className="font-medium mb-2">Baseline (TriDet + VAD)</p>
-                                <table className="w-full text-sm text-left text-gray-700 border border-gray-200 rounded">
+                                <p className="font-medium mb-2">Baseline (TriDet + VAD)</p>
+                                <table
+                                    className="w-full text-sm text-left text-gray-700 border border-gray-200 rounded">
                                     <thead className="bg-gray-100">
                                     <tr>
                                         <th className="px-3 py-2 border-b">Metric</th>
@@ -508,6 +531,22 @@ export default function Workshop() {
                                     </tr>
                                     </tbody>
                                 </table>
+                            </div>
+                            <div className="mt-8 text-center">
+                                <a
+                                    href={kaggle_comp_url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-6 py-3
+               text-white shadow hover:bg-sky-600 transition"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                         className="h-5 w-5" fill="currentColor">
+                                        <path
+                                            d="M4 4h4v7.586l8.293-8.293 2.414 2.414L10.414 14l8.293 8.293-2.414 2.414L8 16.414V24H4V4z"/>
+                                    </svg>
+                                    Join&nbsp;on&nbsp;Kaggle
+                                </a>
                             </div>
                         </div>
                         {/*/!* Track 3 *!/*/}
@@ -668,7 +707,7 @@ export default function Workshop() {
                 {/* ───────────────────────────────────── Footer ───────────────────────────────────── */}
                 <footer className="mt-32 bg-gray-50 py-6 text-center text-sm text-gray-600">
                     <p>
-                        © {new Date().getFullYear()} BinEgo‑360 Workshop. Built with Next.js &amp; Tailwind CSS.
+                        © {new Date().getFullYear()} BinEgo‑360° Workshop. Built with Next.js &amp; Tailwind CSS.
                         Hosted on GitHub Pages.
                     </p>
                 </footer>
