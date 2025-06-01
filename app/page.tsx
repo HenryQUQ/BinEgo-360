@@ -9,7 +9,8 @@ const sponsor_insta360_path = `${root_path}/insta360-logo.png`; // add your logo
 
 
 const google_form_url = "";
-const kaggle_comp_url = "";
+const kaggle_comp_classification_url = "https://www.kaggle.com/competitions/bin-ego-360-challenge-classification";
+const kaggle_comp_tal_url = "https://www.kaggle.com/competitions/bin-ego-360-challenge-tal";
 
 const iccv_logo_path         = `${root_path}/iccv-hawaii-logo.svg`;
 const hero_bg_path           = `${root_path}/hawaii-hero.jpg`;
@@ -471,7 +472,7 @@ export default function Workshop() {
 
                             <div className="mt-8 text-center">
                                 <a
-                                    href={kaggle_comp_url}
+                                    href={kaggle_comp_classification_url}
                                     target="_blank"
                                     rel="noreferrer"
                                     className="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-6 py-3
@@ -534,7 +535,7 @@ export default function Workshop() {
                             </div>
                             <div className="mt-8 text-center">
                                 <a
-                                    href={kaggle_comp_url}
+                                    href={kaggle_comp_tal_url}
                                     target="_blank"
                                     rel="noreferrer"
                                     className="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-6 py-3
