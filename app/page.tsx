@@ -171,7 +171,7 @@ export default function Workshop() {
                         <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17 12a5 5 0 01-5 5v5h-3v-5a5 5 0 110-10V2h3v5a5 5 0 015 5z"/>
                         </svg>
-                        19 – 20 Oct, 2025
+                        19th Oct, 2025
                     </div>
                     <a href="mailto:j.jiao@bham.ac.uk" className="hover:underline">
                         j.jiao@bham.ac.uk
@@ -570,8 +570,8 @@ export default function Workshop() {
                     <h2 className="text-3xl font-bold text-gray-900">Timeline (Anywhere on Earth)</h2>
                     <ol className="mt-8 border-l-2 border-indigo-600">
                         {[
-                            ["26 Jun 2025", "Dataset & baselines release; Kaggle opens"],
-                            ["13 Jul 2025", "Submission deadline"],
+                            ["1 Jun 2025", "Dataset & baselines release; Kaggle opens"],
+                            ["6 Jul 2025", "Submission deadline"],
                             ["Sep 2025", "Winner slides/posters due"],
                             ["19-20 Oct 2025", "Awards & talks at ICCV 2025 workshop"],
                         ].map(([date, desc], i) => (
