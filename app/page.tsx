@@ -10,7 +10,7 @@ const sponsor_insta360_path = `${root_path}/insta360-logo.png`; // add your logo
 
 const google_form_url = "";
 const kaggle_comp_classification_url = "https://www.kaggle.com/competitions/bin-ego-360-challenge-classification";
-const kaggle_comp_tal_url = "https://www.kaggle.com/competitions/iccv-2025-bin-ego-360-challenge-tal";
+const kaggle_comp_tal_url = "https://www.kaggle.com/competitions/bin-ego-360-challenge-tal";
 
 const iccv_logo_path         = `${root_path}/iccv-hawaii-logo.svg`;
 const hero_bg_path           = `${root_path}/hawaii-hero.jpg`;
