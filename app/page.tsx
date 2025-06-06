@@ -372,7 +372,7 @@ export default function Workshop() {
                         href="https://x360dataset.github.io/"
                         target="_blank" rel="noreferrer"
                         className="underline"
-                    >360+x</a> for training/validation, and a held-out test set for the evaluation. Winners of the challenge will be invited to jointly write a paper about the workshop & challenge to be included in the ICCV proceedings. For more details
+                    >360+x</a> for training/validation, and a held-out test set for the evaluation. <ul>Winners of the challenge will be invited to jointly write a paper about the workshop & challenge to be included in the ICCV proceedings.</ul> For more details
                         about the dataset, tracks, timeline, and submission rules, please see below:
 
                     </p>
