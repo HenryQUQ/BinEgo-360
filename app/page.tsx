@@ -1,11 +1,12 @@
 import Head from "next/head";
 
-const test = false;
+const test = true;
 const root_path = test ? '' : '/BinEgo-360';
 /* ─────────────── Static assets ─────────────── */
 const favicon_path = `${root_path}/favicon.ico`;
 const sponsor_allsee_path = `${root_path}/allsee-logo.jpg`;
-const sponsor_insta360_path = `${root_path}/insta360-logo.png`; // add your logo file here
+const sponsor_insta360_path = `${root_path}/insta360-logo.png`;
+const sponsor_scan_path = `${root_path}/SCAN-logo.png`;
 
 
 const google_form_url = "";
@@ -606,11 +607,11 @@ export default function Workshop() {
                     <h2 className="text-3xl font-bold text-gray-900">Prizes & Sponsors</h2>
                     <ul className="mt-6 space-y-2 text-gray-700">
                         <li><strong>Hardware:</strong> Insta360 X5 panoramic camera</li>
-                        {/*<li><strong>Compute:</strong> 5 000 GPU‑hours on partner cloud</li>*/}
+                        <li><strong>Compute:</strong> GPU Cloud Credit on SCAN</li>
                         <li><strong>Gift:</strong> Amazon / Taobao vouchers</li>
                     </ul>
                     <p className="mt-4 text-gray-700">
-                        Sponsored by <a href="https://www.insta360.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Insta360</a> &middot; <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Allsee</a>
+                        Sponsored by <a href="https://www.insta360.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Insta360</a> &middot; <a href="https://www.scan.co.uk/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">SCAN</a> &middot; <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Allsee</a>
                     </p>
                 </section>
 
@@ -680,6 +681,9 @@ export default function Workshop() {
                     <div className="mt-10 flex flex-wrap justify-center gap-10">
                         <a href="https://www.insta360.com/" target="_blank" rel="noreferrer">
                             <img src={sponsor_insta360_path} alt="Insta360" className="h-24 object-contain" />
+                        </a>
+                        <a href="https://www.scan.co.uk/" target="_blank" rel="noreferrer">
+                            <img src={sponsor_scan_path} alt="Insta360" className="h-24 object-contain" />
                         </a>
                         <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer">
                             <img src={sponsor_allsee_path} alt="Allsee" className="h-24 object-contain" />
