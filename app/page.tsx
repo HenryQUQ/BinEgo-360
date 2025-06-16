@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const test = true;
+const test = false;
 const root_path = test ? '' : '/BinEgo-360';
 /* ─────────────── Static assets ─────────────── */
 const favicon_path = `${root_path}/favicon.ico`;
