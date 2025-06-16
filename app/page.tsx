@@ -607,7 +607,7 @@ export default function Workshop() {
                     <h2 className="text-3xl font-bold text-gray-900">Prizes & Sponsors</h2>
                     <ul className="mt-6 space-y-2 text-gray-700">
                         <li><strong>Hardware:</strong> Insta360 X5 panoramic camera</li>
-                        <li><strong>Compute:</strong> GPU Cloud Credit on SCAN</li>
+                        <li><strong>Compute:</strong> GPU Cloud Credit (worth £5-15k) on SCAN</li>
                         <li><strong>Gift:</strong> Amazon / Taobao vouchers</li>
                     </ul>
                     <p className="mt-4 text-gray-700">
@@ -683,7 +683,7 @@ export default function Workshop() {
                             <img src={sponsor_insta360_path} alt="Insta360" className="h-24 object-contain" />
                         </a>
                         <a href="https://www.scan.co.uk/" target="_blank" rel="noreferrer">
-                            <img src={sponsor_scan_path} alt="Insta360" className="h-24 object-contain" />
+                            <img src={sponsor_scan_path} alt="SCAN" className="h-24 object-contain" />
                         </a>
                         <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer">
                             <img src={sponsor_allsee_path} alt="Allsee" className="h-24 object-contain" />
