@@ -1,20 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { eventInfo } from "./data/site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "BinEgo‑360 Challenge",
-  description: "The BinEgo‑360 Challenge targets human‑like perception by jointly reasoning over 360° panoramic and binocular egocentric video streams, aligned with spatial audio, text and geo‑metadata.",
+  title: eventInfo.title,
+  description: eventInfo.subtitle,
 };
 
 export default function RootLayout({
@@ -25,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={"antialiased"}
       >
         {children}
       </body>
