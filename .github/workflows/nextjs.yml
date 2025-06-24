@@ -82,12 +82,12 @@ jobs:
           cd out
           touch .nojekyll 
           git init
-          git config user.name "HenryQuQ"
-          git config user.email "quchenyuan@qq.com"
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
           git add .
-          git commit -m "Deploy from HenryQUQ repo"
+          git commit -m "Deploy static site"
           git branch -M main
-          git remote add origin https://x-access-token:${GH_TOKEN}@github.com/x360dataset/BinEgo-360.git
+          git remote add origin https://x-access-token:${GH_TOKEN}@github.com/<your-org>/<your-repo>.git
           git push --force origin main
 
       - name: Upload artifact

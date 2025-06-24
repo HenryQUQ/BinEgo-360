@@ -1,143 +1,30 @@
 import Head from "next/head";
 
-const test = false;
-const root_path = test ? '' : '/BinEgo-360';
-/* ─────────────── Static assets ─────────────── */
-const favicon_path = `${root_path}/favicon.ico`;
-const sponsor_allsee_path = `${root_path}/allsee-logo.jpg`;
-const sponsor_insta360_path = `${root_path}/insta360-logo.png`;
-const sponsor_scan_path = `${root_path}/SCAN-logo.png`;
+import {
+  speakers,
+  organizers,
+  technicalOrganizers,
+  rootPath,
+  googleFormUrl,
+  kaggleClassificationUrl,
+  kaggleTalUrl,
+  sponsorAllsee,
+  sponsorInsta360,
+  sponsorScan,
+  faviconPath,
+  iccvLogoPath,
+  heroBgPath,
+  heroTitle,
+  heroTagline,
+  eventLocation,
+  eventDate,
+  contactEmail,
+} from "./data/site";
 
 
-const google_form_url = "";
-const kaggle_comp_classification_url = "https://www.kaggle.com/competitions/bin-ego-360-challenge-classification";
-const kaggle_comp_tal_url = "https://www.kaggle.com/competitions/bin-ego-360-challenge-tal";
 
-const iccv_logo_path         = `${root_path}/iccv-hawaii-logo.svg`;
-const hero_bg_path           = `${root_path}/hawaii-hero.jpg`;
 
-/* ─────────────── Data models ─────────────── */
-interface Speaker {
-    name: string;
-    affiliation: string;
-    img: string;
-    bio: string;
-    link?: string;
-}
 
-const speakers: Speaker[] = [
-    {
-        name: "Addison Lin Wang",
-        affiliation: "Nanyang Technological University",
-        img: `${root_path}/speakers/addison.png`,
-        bio: "Professor Wang is an assistant professor at Nanyang Technological University. He leads the Visual\n" +
-            "Learning and Intelligent Systems Lab, focusing on computer vision, computational photography, and\n" +
-            "deep learning. His expertise in omnidirectional camera-based vision and intelligent systems aligns with\n" +
-            "our workshop’s emphasis on multi-modal scene understanding using panoramic and egocentric data.",
-        link: "https://vlislab22.github.io/vlislab/linwang.html",
-    },
-    {
-        name: "Dima Damen",
-        affiliation: "University of Bristol",
-        img: `${root_path}/speakers/dima.png`,
-        bio: "Professor Damen leads the Machine Learning and Computer Vision Group, focusing on under-\n" +
-            "standing object interactions, actions, and activities using wearable visual sensors. Her expertise in\n" +
-            "egocentric vision and temporal action localization is highly relevant to our workshop’s themes.",
-        link: "https://dimadamen.github.io/",
-    },
-    {
-        name: "Bernard Ghanem",
-        affiliation: "King Abdullah University of Science and Technology",
-        img: `${root_path}/speakers/bernard.jpg`,
-        bio: "Professor Ghanem is a Professor of ECE and CS at King Abdullah University of Science and\n" +
-            "Technology (KAUST) and Chair/Director of the Center of Excellence in Generative AI (GenAI). He\n" +
-            "leads the Image and Video Understanding Lab (IVUL) at KAUST. He leads a local team of the Ego4D\n" +
-            "project, a large-scale egocentric dataset for long-term video understanding. He was an organizer of\n" +
-            "the Annual ActivityNet Large-Scale Activity Recognition Challenge. His expertise in egocentric video\n" +
-            "analysis aligns with our workshop’s focus on multi-modal, multi-view scene understanding and will\n" +
-            "contribute to discussions on advancing egocentric multi-modal learning.",
-        link: "https://www.bernardghanem.com/",
-    },
-];
-
-interface Organizer {
-    name: string;
-    affiliation: string;
-    img: string;
-    link?: string;
-}
-
-const organizers: Organizer[] = [
-    {
-        name: "Jianbo Jiao",
-        affiliation: "University of Birmingham",
-        img: `${root_path}/organizers/jiao.jpg`,
-        link: "https://jianbojiao.com/",
-    },
-    {
-        name: "Shangzhe Wu",
-        affiliation: "University of Cambridge",
-        img: `${root_path}/organizers/wu.jpg`,
-        link: "https://elliottwu.com/",
-    },
-    {
-        name: "Dylan Campbell",
-        affiliation: "Australian National University",
-        img: `${root_path}/organizers/campbell.jpg`,
-        link: "https://sites.google.com/view/djcampbell",
-    },
-    {
-        name: "Yunchao Wei",
-        affiliation: "Beijing Jiaotong University",
-        img: `${root_path}/organizers/wei.jpg`,
-        link: "https://weiyc.github.io/",
-    },
-    {
-        name: "Lu Qi",
-        affiliation: "Insta360",
-        img: `${root_path}/organizers/qi.jpg`,
-        link: "http://luqi.info/",
-    },
-    {
-        name: "Yasmine Mellah",
-        affiliation: "Audioscenic",
-        img: `${root_path}/organizers/placeholder_female.jpg`,
-        link: "https://www.audioscenic.com/",
-    },
-    {
-        name: "Aleš Leonardis",
-        affiliation: "University of Birmingham",
-        img: `${root_path}/organizers/leonardis.jpg`,
-        link: "https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/leonardis-ales",
-    },
-];
-
-const technical_organizers: Organizer[] = [
-    {
-        name: "Chenyuan Qu",
-        affiliation: "University of Birmingham",
-        img: `${root_path}/organizers/chenyuan.jpg`,
-        link: "https://chenyuanqu.com/",
-    },
-    {
-        name: "Han Hu",
-        affiliation: "University of Birmingham",
-        img: `${root_path}/organizers/han.jpg`,
-        link: "https://scholar.google.com/Publicationss?hl=zh-CN&view_op=list_works&gmla=ALUCkoXDRY1FyBSlDC4q0bpK9zpnxnhaf2PzJqv2dgVESTCALg71TCdFa7PGpFqiTrWvhnZalzAY234KBYkLCs4O7U4&user=UJRtTJ0AAAAJ",
-    },
-    {
-        name: "Qiming Huang",
-        affiliation: "University of Birmingham",
-        img: `${root_path}/organizers/qiming.jpg`,
-        link: "https://qiming-huang.github.io/",
-    },
-    {
-        name: "Hao Chen",
-        affiliation: "University of Cambridge",
-        img: `${root_path}/organizers/hao.jpg`,
-        link: "https://h-chen.com/",
-    }
-];
 
 
 
@@ -147,15 +34,9 @@ export default function Workshop() {
         <>
             {/* ───────────────────────────────────── <head> meta ───────────────────────────────────── */}
             <Head>
-                <title>Binocular Egocentric-360° Multi-modal Scene Understanding in the Wild</title>
-                <meta
-                    name="description"
-                    content="Official site of the BinEgo‑360°:  Binocular Egocentric-360° Multi-modal Scene Understanding in the Wild"
-                />
-                <link
-                    rel="icon"
-                    href={favicon_path}
-                />
+                <title>{heroTitle}</title>
+                <meta name="description" content={heroTagline} />
+                <link rel="icon" href={faviconPath} />
             </Head>
 
             {/* ───────────────────────────────────── Navbar ───────────────────────────────────── */}
@@ -166,16 +47,16 @@ export default function Workshop() {
                             <path
                                 d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 112.5-2.5 2.503 2.503 0 01-2.5 2.5z"/>
                         </svg>
-                        Hawaii Convention Center, Honolulu HI, USA
+                        {eventLocation}
                     </div>
                     <div className="flex items-center gap-1">
                         <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17 12a5 5 0 01-5 5v5h-3v-5a5 5 0 110-10V2h3v5a5 5 0 015 5z"/>
                         </svg>
-                        19th Oct, 2025
+                        {eventDate}
                     </div>
-                    <a href="mailto:j.jiao@bham.ac.uk" className="hover:underline">
-                        j.jiao@bham.ac.uk
+                    <a href={`mailto:${contactEmail}`} className="hover:underline">
+                        {contactEmail}
                     </a>
 
                     <div className="ml-auto flex gap-2">
@@ -188,8 +69,7 @@ export default function Workshop() {
                 <nav
                     className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 text-sm font-medium text-gray-700">
                     <div className="flex items-center gap-2 text-base font-semibold">
-                        <span className="text-indigo-600">BinEgo‑360°</span>
-                        <span>Workshop @ ICCV 2025</span>
+                        <span className="text-indigo-600">{heroTitle}</span>
                     </div>
                     <ul className="hidden gap-6 md:flex">
                         {[
@@ -218,29 +98,24 @@ export default function Workshop() {
                 {/* ───────────────────────────────── Hero ───────────────────────────────── */}
                 <section
                     className="relative flex items-center justify-center text-center min-h-[540px] bg-cover bg-center bg-no-repeat"
-                    style={{backgroundImage: `url(${hero_bg_path})`}}
+                    style={{backgroundImage: `url(${heroBgPath})`}}
                 >
                     <div className="absolute inset-0 bg-black/60"/>
 
                     {/* 内容层 */}
                     <div className="relative z-10 mx-auto max-w-5xl px-4">
 
-                        {/* ➌ NEW: ICCV Hawaii logo */}
+                        {/* ➌ NEW: Event logo */}
                         <img
-                            src={iccv_logo_path}
-                            alt="ICCV 2025 Honolulu Hawaii"
+                            src={iccvLogoPath}
+                            alt="Event logo"
                             className="mx-auto mb-6 h-20 w-auto"
                         />
                         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
-                            BinEgo‑360°: Binocular Egocentric-360° Multi-modal Scene Understanding in the Wild
+                            {heroTitle}
                         </h1>
                         <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200">
-                            Welcome to the <span className="font-semibold text-indigo-200">BinEgo‑360°
-            Workshop & Challenge</span> at ICCV 2025. We bring together researchers working on
-                            {' '}<strong>360° panoramic</strong> and <strong>binocular egocentric</strong> vision to
-                            explore
-                            human‑like perception across <em>video</em>, <em>audio</em>, and <em>geo‑spatial</em>{' '}
-                            modalities.
+                            {heroTagline}
                         </p>
                         <div className="mt-8 flex flex-wrap justify-center gap-4">
                             <a
@@ -343,12 +218,11 @@ export default function Workshop() {
                 <section id="callforpapers" className="mx-auto mt-24 max-w-6xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Call for Papers</h2>
                     <p className="mt-6 text-gray-700">
-                        We will invite papers from the ICCV 2025 main conference. All of the papers will be with related
-                        research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline July 13th):
+                        Provide details about your paper submissions here. Include a link to the submission form and important dates.
                     </p>
                     <div className="mt-8 text-center">
                         <a
-                            href={google_form_url}
+                            href={googleFormUrl}
                             target="_blank"
                             rel="noreferrer"
                             className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3
@@ -366,16 +240,9 @@ export default function Workshop() {
 
                 {/* ───────────────────────────────── Challenge ───────────── */}
                 <section id="challenge" className="mx-auto mt-24 max-w-6xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">BinEgo‑360° Challenge</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">Challenge</h2>
                     <p className="mt-6 text-gray-700">
-
-                        The challenge uses our public dataset <a
-                        href="https://x360dataset.github.io/"
-                        target="_blank" rel="noreferrer"
-                        className="underline"
-                    >360+x</a> for training/validation, and a held-out test set for the evaluation. <ul>Winners of the challenge will be invited to jointly write a paper about the workshop & challenge to be included in the ICCV proceedings.</ul> For more details
-                        about the dataset, tracks, timeline, and submission rules, please see below:
-
+                        Describe your competition or benchmark here. Include links to the dataset and rules if applicable.
                     </p>
 
                {/*     <div className="mt-8 text-center">*/}
@@ -400,51 +267,7 @@ export default function Workshop() {
                 {/* ───────────────────────────────── Dataset Overview ───────────────────────── */}
                 <section id="dataset" className="mx-auto mt-24 max-w-6xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Dataset Overview</h2>
-                    <div className="mt-8 grid gap-8 md:grid-cols-2">
-                        <div className="w-full h-[400px] overflow-hidden rounded-lg shadow-md">
-                            <img
-                                src="https://x360dataset.github.io/static/images/overall.gif"
-                                alt="Dataset montage"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                        <div className="flex flex-col justify-center text-gray-700">
-                            <ul className="space-y-3">
-                                <li>2,152 videos – 8.579 M frames / 67.78 h.</li>
-                                <li><strong>Viewpoints</strong>: 360° panoramic, binocular &amp; monocular egocentric, third‑person front.</li>
-                                <li><strong>Modalities</strong>: RGB video, 6‑channel spatial audio, GPS + weather, text scene description.</li>
-                                <li><strong>Annotations</strong>: 38 action classes, temporal segments; object bounding boxes.</li>
-                                <li><strong>Resolution</strong>: 5 K originals (5 760 × 2 880 pano).</li>
-                                <li><strong>License</strong>: CC BY‑NC‑SA 4.0. All faces auto‑blurred.</li>
-                            </ul>
-                            <div className="mt-6 flex flex-wrap gap-4">
-                                <a
-                                    href="https://huggingface.co/datasets/quchenyuan/360x_dataset_HR"
-                                    className="rounded bg-gray-800 px-4 py-2 text-sm font-medium text-white hover:bg-gray-900"
-                                >
-                                    Download HR
-                                </a>
-                                <a
-                                    href="https://huggingface.co/datasets/quchenyuan/360x_dataset_LR"
-                                    className="rounded border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:border-gray-400"
-                                >
-                                    Download LR
-                                </a>
-                                <a
-                                    href="https://arxiv.org/abs/2404.00989"
-                                    className="rounded border border-indigo-600 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-700 hover:bg-indigo-100"
-                                >
-                                    Paper (CVPR 2024)
-                                </a>
-                                <a
-                                    href="https://github.com/x360dataset/x360dataset-kit"
-                                    className="rounded border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:border-gray-400"
-                                >
-                                    Baseline Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <p className="mt-6 text-gray-700">Add a short description of your dataset here, including download links and license information.</p>
                 </section>
 
                 {/* ───────────────────────────────── Challenge Tracks ───────────────────────── */}
@@ -473,7 +296,7 @@ export default function Workshop() {
 
                             <div className="mt-8 text-center">
                                 <a
-                                    href={kaggle_comp_classification_url}
+                                    href={kaggleClassificationUrl}
                                     target="_blank"
                                     rel="noreferrer"
                                     className="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-6 py-3
@@ -536,7 +359,7 @@ export default function Workshop() {
                             </div>
                             <div className="mt-8 text-center">
                                 <a
-                                    href={kaggle_comp_tal_url}
+                                    href={kaggleTalUrl}
                                     target="_blank"
                                     rel="noreferrer"
                                     className="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-6 py-3
@@ -571,10 +394,10 @@ export default function Workshop() {
                     <h2 className="text-3xl font-bold text-gray-900">Timeline (Anywhere on Earth)</h2>
                     <ol className="mt-8 border-l-2 border-indigo-600">
                         {[
-                            ["1 Jun 2025", "Dataset & baselines release; Kaggle opens"],
-                            ["6 Jul 2025", "Submission deadline"],
-                            ["Sep 2025", "Winner slides/posters due"],
-                            ["19-20 Oct 2025", "Awards & talks at ICCV 2025 workshop"],
+                            ["Date 1", "Milestone one"],
+                            ["Date 2", "Milestone two"],
+                            ["Date 3", "Milestone three"],
+                            ["Date 4", "Milestone four"],
                         ].map(([date, desc], i) => (
                             <li key={i} className="relative ml-6 pb-8 last:pb-0">
                                 <span className="absolute -left-3 top-1.5 h-2 w-2 rounded-full bg-indigo-600" />
@@ -653,7 +476,7 @@ export default function Workshop() {
                         <span className="font-semibold">Technical Committee:</span>
                     </p>
                     <div className="mt-8 grid gap-8 md:grid-cols-3 lg:grid-cols-4">
-                        {technical_organizers.map((o) => (
+                        {technicalOrganizers.map((o) => (
                             <div key={o.name} className="text-center">
                                 <a href={o.link} target="_blank" rel="noreferrer">
                                     <img
@@ -680,13 +503,13 @@ export default function Workshop() {
                     <p className="mt-6 text-gray-700">We gratefully acknowledge the generous support of our sponsors.</p>
                     <div className="mt-10 flex flex-wrap justify-center gap-10">
                         <a href="https://www.insta360.com/" target="_blank" rel="noreferrer">
-                            <img src={sponsor_insta360_path} alt="Insta360" className="h-24 object-contain" />
+                            <img src={sponsorInsta360} alt="Insta360" className="h-24 object-contain" />
                         </a>
                         <a href="https://www.scan.co.uk/" target="_blank" rel="noreferrer">
-                            <img src={sponsor_scan_path} alt="SCAN" className="h-24 object-contain" />
+                            <img src={sponsorScan} alt="SCAN" className="h-24 object-contain" />
                         </a>
                         <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer">
-                            <img src={sponsor_allsee_path} alt="Allsee" className="h-24 object-contain" />
+                            <img src={sponsorAllsee} alt="Allsee" className="h-24 object-contain" />
                         </a>
                     </div>
                 </section>
@@ -696,23 +519,15 @@ export default function Workshop() {
 
 
                 {/* ───────────────────────────────── Publications ───────────────────────── */}
-                <section className="mx-auto mt-24 max-w-3xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Publication(s)</h2>
-                    <p className="mt-4 text-gray-700">If you use the 360+x dataset or participate in the challenge, please cite:</p>
-                    <pre className="mt-4 rounded bg-gray-100 p-4 text-sm leading-tight text-gray-800 overflow-x-auto">
-            {`@inproceedings{chen2024x360,
-  title     = {360+x: A Panoptic Multi-modal Scene Understanding Dataset},
-  author    = {Chen, Hao and Hou, Yuqi and Qu, Chenyuan and Testini, Irene and Hong, Xiaohan and Jiao, Jianbo},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  year      = {2024}
-}`}
-          </pre>
-                </section>
+                    <section className="mx-auto mt-24 max-w-3xl px-4">
+                        <h2 className="text-3xl font-bold text-gray-900">Publication(s)</h2>
+                        <p className="mt-4 text-gray-700">Include references or citation information for your project here.</p>
+                    </section>
 
                 {/* ───────────────────────────────────── Footer ───────────────────────────────────── */}
                 <footer className="mt-32 bg-gray-50 py-6 text-center text-sm text-gray-600">
                     <p>
-                        © {new Date().getFullYear()} BinEgo‑360° Workshop. Built with Next.js &amp; Tailwind CSS.
+                        © {new Date().getFullYear()} Event Template. Built with Next.js &amp; Tailwind CSS.
                         Hosted on GitHub Pages.
                     </p>
                 </footer>
