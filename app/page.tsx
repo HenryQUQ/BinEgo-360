@@ -383,7 +383,7 @@ export default function Workshop() {
                             Please make sure to send your <strong>author list, affiliations, emails, and attendee details for the workshop (indicating clearly if the attendee is a student or not)</strong> to <a href="mailto:x360dataset@outlook.com" className="text-indigo-600 underline">x360dataset@outlook.com</a> before the deadline.
                         </p>
                         <p className="mt-2">
-                            Additionally, you will need to provide your test code separately for evaluation purposes. Due to the large size of the test dataset, the Kaggle sandbox environment cannot handle this process. Note that your submitted code will <strong>only be used for testing purposes</strong> and will be deleted after evaluation.
+                            Additionally, you will need to provide your test code and checkpoint separately for evaluation purposes. Due to the large size of the test dataset, the Kaggle sandbox environment cannot handle this process. Note that your submitted code will <strong>only be used for testing purposes</strong> and will be deleted after evaluation.
                         </p>
                     </div>
 
@@ -581,7 +581,7 @@ export default function Workshop() {
                     <ol className="mt-8 border-l-2 border-indigo-600">
                         {[
                             ["1 Jun 2025", "Dataset & baselines release; Kaggle opens"],
-                            ["6 Jul 2025", "Submission deadline"],
+                            ["8 Jul 2025", "Submission deadline"],
                             ["Sep 2025", "Winner slides/posters due"],
                             ["19-20 Oct 2025", "Awards & talks at ICCV 2025 workshop"],
                         ].map(([date, desc], i) => (
