@@ -380,7 +380,10 @@ export default function Workshop() {
                     <div className="mt-6 rounded border-l-4 border-yellow-400 bg-yellow-50 p-4 text-gray-700">
                         <p className="font-semibold">Important Notice:</p>
                         <p className="mt-2">
-                            Please make sure to send your <strong>author list, affiliations, emails, and attendee details for the workshop (indicating clearly if the attendee is a student or not), and test code and checkpoint</strong> to <a href="mailto:x360dataset@outlook.com" className="text-indigo-600 underline">x360dataset@outlook.com</a> before the deadline. Due to the large size of the test dataset, the Kaggle sandbox environment cannot handle this process. Note that your submitted code will <strong>only be used for testing purposes</strong> and will be deleted after evaluation.
+                            Please make sure to send your <strong>author list, affiliations, emails, and attendee details for the workshop (indicating clearly if the attendee is a student or not), and test code and checkpoint</strong> to <a href="mailto:x360dataset@outlook.com" className="text-indigo-600 underline">x360dataset@outlook.com</a> before the deadline. 
+                        </p>
+                        <p className="mt-2">
+                            Due to the large size of the test dataset, the Kaggle sandbox environment cannot handle this process. Note that your submitted code will <strong>only be used for testing purposes</strong> and will be deleted after evaluation.
                         </p>
                     </div>
 
