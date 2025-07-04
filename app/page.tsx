@@ -377,6 +377,15 @@ export default function Workshop() {
                         about the dataset, tracks, timeline, and submission rules, please see below:
 
                     </p>
+                    <div className="mt-6 rounded border-l-4 border-yellow-400 bg-yellow-50 p-4 text-gray-700">
+                        <p className="font-semibold">Important Notice:</p>
+                        <p className="mt-2">
+                            Please make sure to send your <strong>author list, affiliations, emails, and attendee details for the workshop (indicating clearly if the attendee is a student or not)</strong> to <a href="mailto:x360dataset@outlook.com" className="text-indigo-600 underline">x360dataset@outlook.com</a> before the deadline.
+                        </p>
+                        <p className="mt-2">
+                            Additionally, you will need to provide your test code separately for evaluation purposes. Due to the large size of the test dataset, the Kaggle sandbox environment cannot handle this process. Note that your submitted code will <strong>only be used for testing purposes</strong> and will be deleted after evaluation.
+                        </p>
+                    </div>
 
                {/*     <div className="mt-8 text-center">*/}
                {/*         <a*/}
