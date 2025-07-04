@@ -581,7 +581,7 @@ export default function Workshop() {
                     <ol className="mt-8 border-l-2 border-indigo-600">
                         {[
                             ["1 Jun 2025", "Dataset & baselines release; Kaggle opens"],
-                            ["6 Jul 2025", "Submission deadline"],
+                            ["8 Jul 2025", "Submission deadline"],
                             ["Sep 2025", "Winner slides/posters due"],
                             ["19-20 Oct 2025", "Awards & talks at ICCV 2025 workshop"],
                         ].map(([date, desc], i) => (
