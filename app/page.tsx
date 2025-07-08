@@ -344,7 +344,7 @@ export default function Workshop() {
                     <h2 className="text-3xl font-bold text-gray-900">Call for Papers</h2>
                     <p className="mt-6 text-gray-700">
                         We will invite papers from the ICCV 2025 main conference. All of the papers will be with related
-                        research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline July 13th):
+                        research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline August 10th):
                     </p>
                     <div className="mt-8 text-center">
                         <a
