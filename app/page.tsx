@@ -9,7 +9,7 @@ const sponsor_insta360_path = `${root_path}/insta360-logo.png`;
 const sponsor_scan_path = `${root_path}/SCAN-logo.png`;
 
 
-const google_form_url = "";
+const google_form_url = "https://forms.gle/Yhui7XdjZhkCvnwv5";
 const kaggle_comp_classification_url = "https://www.kaggle.com/competitions/bin-ego-360-challenge-classification";
 const kaggle_comp_tal_url = "https://www.kaggle.com/competitions/bin-ego-360-challenge-tal";
 
