@@ -7,6 +7,7 @@ const favicon_path = `${root_path}/favicon.ico`;
 const sponsor_allsee_path = `${root_path}/allsee-logo.jpg`;
 const sponsor_insta360_path = `${root_path}/insta360-logo.png`;
 const sponsor_scan_path = `${root_path}/SCAN-logo.png`;
+const sponsor_tencent_path = `${root_path}/tencent_logo.png`;
 
 
 const google_form_url = "https://forms.gle/Yhui7XdjZhkCvnwv5";
@@ -615,12 +616,25 @@ export default function Workshop() {
                 <section id="prizes" className="mx-auto mt-24 max-w-4xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Prizes & Sponsors</h2>
                     <ul className="mt-6 space-y-2 text-gray-700">
-                        <li><strong>Hardware:</strong> Insta360 X5 panoramic camera</li>
-                        <li><strong>Compute:</strong> GPU Cloud Credit (worth £5-15k) on SCAN</li>
-                        <li><strong>Gift:</strong> Amazon / Taobao vouchers</li>
+                        <li><strong>Hardware:</strong> Insta360 X5 panoramic camera (<a href="https://www.insta360.com/"
+                                                                                        target="_blank" rel="noreferrer"
+                                                                                        className="text-indigo-600 hover:underline">Insta360</a>)
+                        </li>
+                        <li><strong>Compute:</strong> GPU Cloud Credit (worth £5-15k) (<a href="https://www.scan.co.uk/"
+                                                                                          target="_blank"
+                                                                                          rel="noreferrer"
+                                                                                          className="text-indigo-600 hover:underline">SCAN</a>)</li>
+                        <li><strong>Gift:</strong> Amazon / Taobao vouchers (<a href="https://www.allsee-tech.com/"
+                                                                                target="_blank" rel="noreferrer"
+                                                                                className="text-indigo-600 hover:underline">Allsee</a>)
+                        </li>
+                        <li><strong>Registration:</strong> Workshop fee for the 1st &amp; 2nd winners on each track (<a
+                            href="https://www.tencent.com/" target="_blank" rel="noreferrer"
+                            className="text-indigo-600 hover:underline">Tencent</a>)
+                        </li>
                     </ul>
                     <p className="mt-4 text-gray-700">
-                        Sponsored by <a href="https://www.insta360.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Insta360</a> &middot; <a href="https://www.scan.co.uk/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">SCAN</a> &middot; <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Allsee</a>
+                        Sponsored by <a href="https://www.insta360.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Insta360</a> &middot; <a href="https://www.scan.co.uk/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">SCAN</a> &middot; <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Allsee</a> &middot; <a href="https://www.tencent.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Tencent</a>
                     </p>
                 </section>
 
@@ -684,7 +698,7 @@ export default function Workshop() {
                     </p>
                 </section>
 
-                <section id="sponsors" className="mx-auto mt-24 max-w-5xl px-4 text-center">
+                <section id="sponsors" className="mx-auto mt-24 max-w-10xl px-4 text-center">
                     <h2 className="text-3xl font-bold text-gray-900">Sponsors</h2>
                     <p className="mt-6 text-gray-700">We gratefully acknowledge the generous support of our sponsors.</p>
                     <div className="mt-10 flex flex-wrap justify-center gap-10">
@@ -696,6 +710,9 @@ export default function Workshop() {
                         </a>
                         <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer">
                             <img src={sponsor_allsee_path} alt="Allsee" className="h-24 object-contain" />
+                        </a>
+                        <a href="https://www.tencent.com/" target="_blank" rel="noreferrer">
+                            <img src={sponsor_tencent_path} alt="Tencent" className="h-24 object-contain" />
                         </a>
                     </div>
                 </section>
