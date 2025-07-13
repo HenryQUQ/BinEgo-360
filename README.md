@@ -38,7 +38,7 @@ Details an invited-paper model (submission deadline **13 July 2025**) with a Goo
     2. **Temporal Action Localization** – metric: mAP@{0.5, 0.75, 0.95} (baseline avg 17.6 ). :contentReference[oaicite:33]{index=33}
 * **Timeline (AoE)**: Dataset release 1 Jun 2025 → submissions close 8 Jul 2025 → winners announced at workshop 19-20 Oct 2025. :contentReference[oaicite:34]{index=34}
 * **Submission rules**: ≤ 5 members/team, 5 uploads/track, tech report & poster required for winners, no overlapping external data. :contentReference[oaicite:35]{index=35}
-* **Prizes**: Insta360 X5 camera, GPU cloud credits (~£5-15 k) via SCAN, gift vouchers. Sponsors prominently thanked. :contentReference[oaicite:36]{index=36}
+* **Prizes**: Insta360 X5 camera, GPU cloud credits (~£5-15 k) via SCAN, gift vouchers, and workshop registration for the 1st & 2nd winners sponsored by Tencent. Sponsors prominently thanked. :contentReference[oaicite:36]{index=36}
 
 ### 2.6  Ethics & Broader Impact
 States consent, blurring, non-commercial licence, anti-surveillance stance, and potential benefits to robotics, AR/VR & assistive tech. :contentReference[oaicite:37]{index=37}
@@ -47,7 +47,7 @@ States consent, blurring, non-commercial licence, anti-surveillance stance, and 
 Seven core organisers + four technical leads, each with avatar, affiliation and personal-site link. Contact email: **j.jiao@bham.ac.uk**. :contentReference[oaicite:38]{index=38}
 
 ### 2.8  Sponsors
-Logo grid for **Insta360**, **SCAN** and **Allsee** with external links. :contentReference[oaicite:39]{index=39}
+Logo grid for **Insta360**, **SCAN**, **Allsee**, and **Tencent** with external links. :contentReference[oaicite:39]{index=39}
 
 ### 2.9  Publication
 BibTeX snippet for citing the foundational *360+x* CVPR 2024 paper. :contentReference[oaicite:40]{index=40}

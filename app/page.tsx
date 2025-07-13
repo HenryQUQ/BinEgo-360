@@ -7,6 +7,7 @@ const favicon_path = `${root_path}/favicon.ico`;
 const sponsor_allsee_path = `${root_path}/allsee-logo.jpg`;
 const sponsor_insta360_path = `${root_path}/insta360-logo.png`;
 const sponsor_scan_path = `${root_path}/SCAN-logo.png`;
+const sponsor_tencent_path = `${root_path}/tencent-logo.svg`;
 
 
 const google_form_url = "https://forms.gle/Yhui7XdjZhkCvnwv5";
@@ -618,9 +619,10 @@ export default function Workshop() {
                         <li><strong>Hardware:</strong> Insta360 X5 panoramic camera</li>
                         <li><strong>Compute:</strong> GPU Cloud Credit (worth £5-15k) on SCAN</li>
                         <li><strong>Gift:</strong> Amazon / Taobao vouchers</li>
+                        <li><strong>Registration:</strong> Workshop fee for the 1st &amp; 2nd winners, courtesy of Tencent</li>
                     </ul>
                     <p className="mt-4 text-gray-700">
-                        Sponsored by <a href="https://www.insta360.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Insta360</a> &middot; <a href="https://www.scan.co.uk/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">SCAN</a> &middot; <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Allsee</a>
+                        Sponsored by <a href="https://www.insta360.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Insta360</a> &middot; <a href="https://www.scan.co.uk/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">SCAN</a> &middot; <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Allsee</a> &middot; <a href="https://www.tencent.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Tencent</a>
                     </p>
                 </section>
 
@@ -696,6 +698,9 @@ export default function Workshop() {
                         </a>
                         <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer">
                             <img src={sponsor_allsee_path} alt="Allsee" className="h-24 object-contain" />
+                        </a>
+                        <a href="https://www.tencent.com/" target="_blank" rel="noreferrer">
+                            <img src={sponsor_tencent_path} alt="Tencent" className="h-24 object-contain" />
                         </a>
                     </div>
                 </section>
