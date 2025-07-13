@@ -1,13 +1,13 @@
 import Head from "next/head";
 
-const test = false;
+const test = true;
 const root_path = test ? '' : '/BinEgo-360';
 /* ─────────────── Static assets ─────────────── */
 const favicon_path = `${root_path}/favicon.ico`;
 const sponsor_allsee_path = `${root_path}/allsee-logo.jpg`;
 const sponsor_insta360_path = `${root_path}/insta360-logo.png`;
 const sponsor_scan_path = `${root_path}/SCAN-logo.png`;
-const sponsor_tencent_path = `${root_path}/tencent-logo.svg`;
+const sponsor_tencent_path = `${root_path}/tencent_logo.png`;
 
 
 const google_form_url = "https://forms.gle/Yhui7XdjZhkCvnwv5";
