@@ -381,13 +381,13 @@ export default function Workshop() {
                     <div className="mt-6 rounded border-l-4 border-yellow-400 bg-yellow-50 p-4 text-gray-700">
                         <p className="font-semibold">Important Notice:</p>
                         <p className="mt-2">
-                            New Final Submission Deadline&nbsp;&nbsp;▶&nbsp;&nbsp;10 August 2025 (AOE)
+                            <b>New Final Submission Deadline&nbsp;&nbsp;▶&nbsp;&nbsp;10 August 2025 (AOE)</b>
                         </p>
                         <p className="mt-2">
                             We are delighted to let you know that the challenge deadline has been extended! Now you have more time to cook your good stuff!
                         </p>
                         <p className="mt-2">
-                            Because the initial Kaggle competition could no longer be reopened after its closing date, a new competition page has been created to host the extended track <a href={kaggle_comp_classification_url} target="_blank" rel="noreferrer" className="text-indigo-600 underline">here</a>.
+                            Because the initial Kaggle competition could no longer be reopened after its closing date, <b>a new competition page has been created to host the extended track</b> <a href={kaggle_comp_classification_url} target="_blank" rel="noreferrer" className="text-indigo-600 underline">here</a>.
                         </p>
                         <p className="mt-2">
                             All rules, evaluation metrics, and prizes remain unchanged; only the schedule has shifted, and you can submit via kaggle's sandbox. If you submitted to the first competition, simply re-upload your final model predictions here before the new deadline. ✨
