@@ -381,10 +381,16 @@ export default function Workshop() {
                     <div className="mt-6 rounded border-l-4 border-yellow-400 bg-yellow-50 p-4 text-gray-700">
                         <p className="font-semibold">Important Notice:</p>
                         <p className="mt-2">
-                            Please make sure to send your <strong>author list, affiliations, emails, and attendee details for the workshop (indicating clearly if the attendee is a student or not), and test code and checkpoint</strong> to <a href="mailto:x360dataset@outlook.com" className="text-indigo-600 underline">x360dataset@outlook.com</a> before the deadline. 
+                            New Final Submission Deadline&nbsp;&nbsp;▶&nbsp;&nbsp;10 August 2025 (AOE)
                         </p>
                         <p className="mt-2">
-                            Due to the large size of the test dataset, the Kaggle sandbox environment cannot handle this process. Note that your submitted code will <strong>only be used for testing purposes</strong> and will be deleted after evaluation.
+                            We are delighted to let you know that the challenge deadline has been extended! Now you have more time to cook your good stuff!
+                        </p>
+                        <p className="mt-2">
+                            Because the initial Kaggle competition could no longer be reopened after its closing date, a new competition page has been created to host the extended track <a href={kaggle_comp_classification_url} target="_blank" rel="noreferrer" className="text-indigo-600 underline">here</a>.
+                        </p>
+                        <p className="mt-2">
+                            All rules, evaluation metrics, and prizes remain unchanged; only the schedule has shifted, and you can submit via kaggle's sandbox. If you submitted to the first competition, simply re-upload your final model predictions here before the new deadline. ✨
                         </p>
                     </div>
 
@@ -582,7 +588,7 @@ export default function Workshop() {
                     <ol className="mt-8 border-l-2 border-indigo-600">
                         {[
                             ["1 Jun 2025", "Dataset & baselines release; Kaggle opens"],
-                            ["8 Jul 2025", "Submission deadline"],
+                            ["10 Aug 2025", "Submission deadline"],
                             ["Sep 2025", "Winner slides/posters due"],
                             ["19-20 Oct 2025", "Awards & talks at ICCV 2025 workshop"],
                         ].map(([date, desc], i) => (
