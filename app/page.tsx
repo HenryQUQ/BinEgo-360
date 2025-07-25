@@ -345,7 +345,7 @@ export default function Workshop() {
                     <h2 className="text-3xl font-bold text-gray-900">Call for Papers</h2>
                     <p className="mt-6 text-gray-700">
                         We will invite papers from the ICCV 2025 main conference. All of the papers will be with related
-                        research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline August 10th):
+                        research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline August 20th):
                     </p>
                     <div className="mt-8 text-center">
                         <a
@@ -380,7 +380,7 @@ export default function Workshop() {
                     <div className="mt-6 rounded border-l-4 border-yellow-400 bg-yellow-50 p-4 text-gray-700">
                         <p className="font-semibold">Important Notice:</p>
                         <p className="mt-2">
-                            <b>New Final Submission Deadline&nbsp;&nbsp;▶&nbsp;&nbsp;10 August 2025 (AOE)</b>
+                            <b>New Final Submission Deadline&nbsp;&nbsp;▶&nbsp;&nbsp;20 August 2025 (AOE)</b>
                         </p>
                         <p className="mt-2">
                             We are delighted to let you know that the challenge deadline has been extended! Now you have more time to cook your good stuff!
@@ -581,7 +581,7 @@ export default function Workshop() {
                     <ol className="mt-8 border-l-2 border-indigo-600">
                         {[
                             ["1 Jun 2025", "Dataset & baselines release; Kaggle opens"],
-                            ["10 Aug 2025", "Submission deadline"],
+                            ["20 Aug 2025", "Submission deadline"],
                             ["Sep 2025", "Winner slides/posters due"],
                             ["19-20 Oct 2025", "Awards & talks at ICCV 2025 workshop"],
                         ].map(([date, desc], i) => (
