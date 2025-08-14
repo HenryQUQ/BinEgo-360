@@ -198,7 +198,7 @@ export default function Workshop() {
                             ["Overview", "#overview"],
                             ["Speakers", "#speakers"],
                             ["Programme", "#programme"],
-                            ["Call for Papers", "#callforpapers"],
+                            ["Call for Paper Presentations", "#callforpapers"],
                             ["Challenge", "#challenge"],
                             ["Organizers", "#organizers"],
                             // ["Dataset", "#dataset"],
@@ -248,7 +248,7 @@ export default function Workshop() {
                                 href="#callforpapers"
                                 className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-white shadow hover:bg-amber-600"
                             >
-                                Call for Papers
+                                Call for Paper Presentations
                             </a>
                             <a
                                 href="#challenge"
@@ -340,12 +340,12 @@ export default function Workshop() {
                     </div>
                 </section>
 
-                {/* ───────────────────────────────── Call for Papers ───────────────────────── */}
+                {/* ──────────────────────────────── Call for Paper Presentations ───────────────────────── */}
                 <section id="callforpapers" className="mx-auto mt-24 max-w-6xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Call for Papers</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">Call for Paper Presentations</h2>
                     <p className="mt-6 text-gray-700">
-                        We will invite papers from the ICCV 2025 main conference. All of the papers will be with related
-                        research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline August 20th):
+                        We invite papers from the ICCV 2025 main conference. All of the papers will be with related
+                        research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline August 25th):
                     </p>
                     <div className="mt-8 text-center">
                         <a
