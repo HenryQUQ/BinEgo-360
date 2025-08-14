@@ -28,7 +28,7 @@ Speaker headshots are circular thumbnails that scale up on hover; each name link
 ### 2.3  Programme
 A two-column table lays out the half-day schedule from 09:00 to 12:35, alternating row colours for readability. :contentReference[oaicite:30]{index=30}
 
-### 2.4  Call for Papers
+### 2.4  Call for Paper Presentations
 Details an invited-paper model (submission deadline **13 July 2025**) with a Google Form link placeholder. :contentReference[oaicite:31]{index=31}
 
 ### 2.5  Challenge
