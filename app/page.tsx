@@ -582,7 +582,7 @@ export default function Workshop() {
                         {[
                             ["1 Jun 2025", "Dataset & baselines release; Kaggle opens"],
                             ["20 Aug 2025", "Submission deadline"],
-                            ["Sep 2025", "Winner slides/posters due"],
+                            ["Sep 2025", "Technical report and poster due"],
                             ["19-20 Oct 2025", "Awards & talks at ICCV 2025 workshop"],
                         ].map(([date, desc], i) => (
                             <li key={i} className="relative ml-6 pb-8 last:pb-0">
