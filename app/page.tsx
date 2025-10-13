@@ -142,24 +142,20 @@ const technical_organizers: Organizer[] = [
 
 
 interface KeynoteTalk {
-    label: string;
     speaker: string;
     title: string;
 }
 
 const keynoteTalks: KeynoteTalk[] = [
     {
-        label: "Keynote Talk (1)",
         speaker: "Bernard Ghanem",
         title: "TBD",
     },
     {
-        label: "Keynote Talk (2)",
         speaker: "Dima Damen",
         title: "Video Understanding Out of the Frame: An Egocentric Perspective",
     },
     {
-        label: "Keynote Talk (3)",
         speaker: "Addison Lin Wang",
         title: "360 Vision in the Foundation AI Era: Principles, Methods, and Future Directions",
     },
@@ -193,17 +189,17 @@ const programmeSchedule: Array<[string, string]> = [
     ["09:00 – 09:30", "Opening Remarks"],
     [
         "09:30 – 10:05",
-        `${keynoteTalks[0].label}: ${keynoteTalks[0].speaker} — ${keynoteTalks[0].title}`,
+        `Keynote Talk: ${keynoteTalks[0].speaker} — ${keynoteTalks[0].title}`,
     ],
     [
         "10:05 – 10:40",
-        `${keynoteTalks[1].label}: ${keynoteTalks[1].speaker} — ${keynoteTalks[1].title}`,
+        `Keynote Talk: ${keynoteTalks[1].speaker} — ${keynoteTalks[1].title}`,
     ],
     ["10:40 – 11:00", "Break & Poster Session"],
     ["11:00 – 11:45", "Invited Paper Presentations"],
     [
         "11:45 – 12:20",
-        `${keynoteTalks[2].label}: ${keynoteTalks[2].speaker} — ${keynoteTalks[2].title}`,
+        `Keynote Talk: ${keynoteTalks[2].speaker} — ${keynoteTalks[2].title}`,
     ],
     ["12:20 – 12:35", "Awards Ceremony & Concluding Remarks"],
 ];
@@ -377,9 +373,8 @@ export default function Workshop() {
                         <h3 className="text-2xl font-semibold text-gray-900">Keynote Talks</h3>
                         <ul className="mt-4 space-y-3">
                             {keynoteTalks.map((talk) => (
-                                <li key={talk.label}>
-                                    <span className="font-semibold text-gray-900">{talk.label}</span>
-                                    <span className="text-gray-500"> · </span>
+                                <li key={talk.speaker}>
+                                    <span className="font-semibold text-gray-900">Keynote Talk:</span>{' '}
                                     <span className="font-medium text-gray-900">{talk.speaker}</span>
                                     <span className="text-gray-500"> — </span>
                                     <span>{talk.title}</span>
