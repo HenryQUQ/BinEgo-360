@@ -141,16 +141,71 @@ const technical_organizers: Organizer[] = [
 ];
 
 
-const keynoteTalks = [
-    "Keynote Talk (1): Bernard Ghanem — TBD",
-    "Keynote Talk (2): Dima Damen — Video Understanding Out of the Frame: An Egocentric Perspective",
-    "Keynote Talk (3): Addison Lin Wang — 360 Vision in the Foundation AI Era: Principles, Methods, and Future Directions",
+interface KeynoteTalk {
+    label: string;
+    speaker: string;
+    title: string;
+}
+
+const keynoteTalks: KeynoteTalk[] = [
+    {
+        label: "Keynote Talk (1)",
+        speaker: "Bernard Ghanem",
+        title: "TBD",
+    },
+    {
+        label: "Keynote Talk (2)",
+        speaker: "Dima Damen",
+        title: "Video Understanding Out of the Frame: An Egocentric Perspective",
+    },
+    {
+        label: "Keynote Talk (3)",
+        speaker: "Addison Lin Wang",
+        title: "360 Vision in the Foundation AI Era: Principles, Methods, and Future Directions",
+    },
 ];
 
-const invitedPapers = [
-    "Beyond the Frame: Generating 360° Panoramic Videos from Perspective Videos — Rundong Luo",
-    "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception — Sanjoy Chowdhury",
-    "Switch-a-View: View Selection Learned from Unlabeled In-the-wild Videos — Sagnik Majumder",
+interface InvitedPaper {
+    title: string;
+    authors: string;
+    url: string;
+}
+
+const invitedPapers: InvitedPaper[] = [
+    {
+        title: "Beyond the Frame: Generating 360° Panoramic Videos from Perspective Videos",
+        authors: "Rundong Luo",
+        url: "https://openaccess.thecvf.com/content/CVPR2024/papers/Luo_Beyond_the_Frame_Generating_360_Panoramic_Videos_from_Perspective_Videos_CVPR_2024_paper.pdf",
+    },
+    {
+        title: "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception",
+        authors: "Sanjoy Chowdhury",
+        url: "https://openaccess.thecvf.com/content/CVPR2024/papers/Chowdhury_EgoAdapt_Adaptive_Multisensory_Distillation_and_Policy_Learning_for_Efficient_CVPR_2024_paper.pdf",
+    },
+    {
+        title: "Switch-a-View: View Selection Learned from Unlabeled In-the-wild Videos",
+        authors: "Sagnik Majumder",
+        url: "https://openaccess.thecvf.com/content/CVPR2024/papers/Majumder_Switch-a-View_View_Selection_Learned_from_Unlabeled_In-the-wild_Videos_CVPR_2024_paper.pdf",
+    },
+];
+
+const programmeSchedule: Array<[string, string]> = [
+    ["09:00 – 09:30", "Opening Remarks"],
+    [
+        "09:30 – 10:05",
+        `${keynoteTalks[0].label}: ${keynoteTalks[0].speaker} — ${keynoteTalks[0].title}`,
+    ],
+    [
+        "10:05 – 10:40",
+        `${keynoteTalks[1].label}: ${keynoteTalks[1].speaker} — ${keynoteTalks[1].title}`,
+    ],
+    ["10:40 – 11:00", "Break & Poster Session"],
+    ["11:00 – 11:45", "Invited Paper Presentations"],
+    [
+        "11:45 – 12:20",
+        `${keynoteTalks[2].label}: ${keynoteTalks[2].speaker} — ${keynoteTalks[2].title}`,
+    ],
+    ["12:20 – 12:35", "Awards Ceremony & Concluding Remarks"],
 ];
 
 
@@ -318,6 +373,20 @@ export default function Workshop() {
                             </div>
                         ))}
                     </div>
+                    <div className="mt-12 text-left text-gray-700">
+                        <h3 className="text-2xl font-semibold text-gray-900">Keynote Talks</h3>
+                        <ul className="mt-4 space-y-3">
+                            {keynoteTalks.map((talk) => (
+                                <li key={talk.label}>
+                                    <span className="font-semibold text-gray-900">{talk.label}</span>
+                                    <span className="text-gray-500"> · </span>
+                                    <span className="font-medium text-gray-900">{talk.speaker}</span>
+                                    <span className="text-gray-500"> — </span>
+                                    <span>{talk.title}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </section>
 
 
@@ -334,15 +403,7 @@ export default function Workshop() {
                             </tr>
                             </thead>
                             <tbody>
-                            {[ 
-                                ["09:00 – 09:30", "Opening Remarks"],
-                                ["09:30 – 10:05", "Keynote Talk (1): Bernard Ghanem — TBD"],
-                                ["10:05 – 10:40", "Keynote Talk (2): Dima Damen — Video Understanding Out of the Frame: An Egocentric Perspective"],
-                                ["10:40 – 11:00", "Break & Poster Session"],
-                                ["11:00 – 11:45", "Invited Paper Presentations"],
-                                ["11:45 – 12:20", "Keynote Talk (3): Addison Lin Wang — 360 Vision in the Foundation AI Era: Principles, Methods, and Future Directions"],
-                                ["12:20 – 12:35", "Awards Ceremony & Concluding Remarks"],
-                            ].map(([time, event], i) => (
+                            {programmeSchedule.map(([time, event], i) => (
                                 <tr key={i} className="odd:bg-white even:bg-gray-50">
                                     <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{time}</td>
                                     <td className="px-4 py-2">{event}</td>
@@ -350,24 +411,6 @@ export default function Workshop() {
                             ))}
                             </tbody>
                         </table>
-                    </div>
-                    <div className="mt-8 space-y-8 text-gray-700">
-                        <div>
-                            <h3 className="text-2xl font-semibold text-gray-900">Keynote Talks</h3>
-                            <ul className="mt-4 space-y-2 list-disc pl-6">
-                                {keynoteTalks.map((talk) => (
-                                    <li key={talk}>{talk}</li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-2xl font-semibold text-gray-900">Invited Paper Presentations</h3>
-                            <ul className="mt-4 space-y-2 list-disc pl-6">
-                                {invitedPapers.map((paper) => (
-                                    <li key={paper}>{paper}</li>
-                                ))}
-                            </ul>
-                        </div>
                     </div>
                 </section>
 
@@ -394,6 +437,29 @@ export default function Workshop() {
                             Submit via&nbsp;Google&nbsp;Form
                         </a>
                     </div>
+                </section>
+
+                {/* ───────────────────────────────── Invited Paper Presentations ───────────────────────────────── */}
+                <section id="invited-papers" className="mx-auto mt-24 max-w-4xl px-4 text-gray-700">
+                    <h2 className="text-3xl font-bold text-gray-900">Invited Paper Presentations</h2>
+                    <p className="mt-6">
+                        Explore the invited papers that will be highlighted during the dedicated presentation session.
+                    </p>
+                    <ul className="mt-6 list-disc space-y-3 pl-6">
+                        {invitedPapers.map((paper) => (
+                            <li key={paper.title}>
+                                <a
+                                    href={paper.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="font-semibold text-indigo-700 hover:text-indigo-900 hover:underline"
+                                >
+                                    {paper.title}
+                                </a>
+                                <span className="block text-sm text-gray-600">{paper.authors}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </section>
 
                 {/* ───────────────────────────────── Challenge ───────────── */}
