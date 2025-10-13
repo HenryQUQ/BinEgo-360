@@ -170,17 +170,17 @@ interface InvitedPaper {
 const invitedPapers: InvitedPaper[] = [
     {
         title: "Beyond the Frame: Generating 360° Panoramic Videos from Perspective Videos",
-        authors: "Rundong Luo",
+        authors: "Presenter: Rundong Luo",
         url: "https://red-fairy.github.io/argus/",
     },
     {
         title: "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception",
-        authors: "Sanjoy Chowdhury",
+        authors: "Presenter: Sanjoy Chowdhury",
         url: "https://arxiv.org/abs/2506.21080",
     },
     {
         title: "Switch-a-View: View Selection Learned from Unlabeled In-the-wild Videos",
-        authors: "Sagnik Majumder",
+        authors: "Presenter: Sagnik Majumder",
         url: "https://vision.cs.utexas.edu/projects/switch_a_view/",
     },
 ];
@@ -231,7 +231,7 @@ export default function Workshop() {
                             <path
                                 d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 112.5-2.5 2.503 2.503 0 01-2.5 2.5z"/>
                         </svg>
-                        Hawaii Convention Center, Honolulu HI, USA
+                        Hawaii Convention Center, Honolulu HI, USA, Room 306 B
                     </div>
                     <div className="flex items-center gap-1">
                         <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -299,6 +299,9 @@ export default function Workshop() {
                         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
                             BinEgo‑360°: Binocular Egocentric-360° Multi-modal Scene Understanding in the Wild
                         </h1>
+                        <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200">
+                            <a href="https://iccv.thecvf.com/virtual/2025/workshop/2749">Venue: Room 306B</a>
+                        </p>
                         <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200">
                             Welcome to the <span className="font-semibold text-indigo-200">BinEgo‑360°
             Workshop & Challenge</span> at ICCV 2025. We bring together researchers working on
@@ -369,45 +372,69 @@ export default function Workshop() {
                             </div>
                         ))}
                     </div>
-                    <div className="mt-12 text-left text-gray-700">
-                        <h3 className="text-2xl font-semibold text-gray-900">Keynote Talks</h3>
-                        <ul className="mt-4 space-y-3">
-                            {keynoteTalks.map((talk) => (
-                                <li key={talk.speaker}>
-                                    <span className="font-semibold text-gray-900">Keynote Talk:</span>{' '}
-                                    <span className="font-medium text-gray-900">{talk.speaker}</span>
-                                    <span className="text-gray-500"> — </span>
-                                    <span>{talk.title}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
                 </section>
-
-
-
                 {/* ───────────────────────────────── Programme ───────────────────────── */}
                 <section id="programme" className="mx-auto mt-24 max-w-4xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Workshop Programme (Half‑day)</h2>
-                    <div className="mt-6 overflow-x-auto">
-                        <table className="w-full min-w-[480px] divide-y divide-gray-200 text-left text-sm text-gray-700">
-                        <thead className="bg-gray-50">
-                            <tr>
-                            <th className="px-4 py-2 font-medium">Time</th>
-                            <th className="px-4 py-2 font-medium">Session</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {programmeSchedule.map(([time, event], i) => (
-                                <tr key={i} className="odd:bg-white even:bg-gray-50">
-                                    <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{time}</td>
-                                    <td className="px-4 py-2">{event}</td>
-                                </tr>
-                            ))}
-                            </tbody>
-                        </table>
-                    </div>
+                <h2 className="text-3xl font-bold text-gray-900">Workshop Programme (Half‑day)</h2>
+                <div className="mt-6 overflow-x-auto">
+                <table className="w-full min-w-[480px] divide-y divide-gray-200 text-left text-sm text-gray-700">
+                    <thead className="bg-gray-50">
+                    <tr>
+                        <th className="px-4 py-2 font-medium">Time</th>
+                        <th className="px-4 py-2 font-medium">Session</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {programmeSchedule.map(([time, event], i) => {
+                        const isKeynote = event.startsWith("Keynote Talk:");
+                        const isInvited = event.includes("Invited Paper Presentations");
+
+                        return (
+                        <tr key={i} className="odd:bg-white even:bg-gray-50 align-top">
+                            <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                            {time}
+                            </td>
+                            <td className="px-4 py-2">
+                            {/* ✅ Keynote 加粗 */}
+                            {isKeynote ? (
+                                <>
+                                <strong>Keynote Talk:</strong>{" "}
+                                {event.replace("Keynote Talk:", "").trim()}
+                                </>
+                            ) : (
+                                event
+                            )}
+
+                            {/* ✅ Invited Paper 子列表 */}
+                            {isInvited && (
+                                <ul className="mt-2 list-disc pl-5 text-gray-600 text-xs space-y-1">
+                                {invitedPapers.map((paper, j) => (
+                                    <li key={j}>
+                                    <a
+                                        href={paper.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="font-medium text-blue-600 hover:underline"
+                                    >
+                                        {paper.title}
+                                    </a>
+                                    <div className="text-gray-500 italic">
+                                        {paper.authors}
+                                    </div>
+                                    </li>
+                                ))}
+                                </ul>
+                            )}
+                            </td>
+                        </tr>
+                        );
+                    })}
+                    </tbody>
+                </table>
+                </div>
                 </section>
+
 
                {/* /!* ──────────────────────────────── Call for Paper Presentations ───────────────────────── *!/*/}
                {/* <section id="callforpapers" className="mx-auto mt-24 max-w-6xl px-4">*/}
@@ -435,7 +462,7 @@ export default function Workshop() {
                {/* </section>*/}
 
                 {/* ───────────────────────────────── Invited Paper Presentations ───────────────────────────────── */}
-                <section id="invited-papers" className="mx-auto mt-24 max-w-4xl px-4 text-gray-700">
+                {/* <section id="invited-papers" className="mx-auto mt-24 max-w-4xl px-4 text-gray-700">
                     <h2 className="text-3xl font-bold text-gray-900">Invited Paper Presentations</h2>
                     <p className="mt-6">
                         Explore the invited papers that will be highlighted during the dedicated presentation session.
@@ -455,7 +482,7 @@ export default function Workshop() {
                             </li>
                         ))}
                     </ul>
-                </section>
+                </section> */}
 
                 {/* ───────────────────────────────── Challenge ───────────── */}
                 <section id="challenge" className="mx-auto mt-24 max-w-6xl px-4">
