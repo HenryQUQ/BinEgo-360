@@ -744,7 +744,7 @@ export default function Workshop() {
                 {/* ───────────────────────────────── Publications ───────────────────────── */}
                 <section className="mx-auto mt-24 max-w-3xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Publication(s)</h2>
-                    <p className="mt-4 text-gray-700">If you use the 360+x dataset or participate in the challenge, please cite:</p>
+                    <p className="mt-4 text-gray-700">If you use the 360+x dataset or participate in the challenge, please consider cite:</p>
                     <pre className="mt-4 rounded bg-gray-100 p-4 text-sm leading-tight text-gray-800 overflow-x-auto">
             {`@inproceedings{chen2024x360,
   title     = {360+x: A Panoptic Multi-modal Scene Understanding Dataset},
