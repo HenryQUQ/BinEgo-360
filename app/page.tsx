@@ -321,7 +321,8 @@ export default function Workshop() {
                             </tr>
                         </thead>
                         <tbody>
-                            {[
+                        {(
+                            [
                             ["09:00 – 09:30", "Opening Remarks"],
                             ["09:30 – 10:05", "Keynote Talk: Bernard Ghanem — TBD"],
                             ["10:05 – 10:40", "Keynote Talk: Dima Damen — Video Understanding Out of the Frame: An Egocentric Perspective"],
@@ -337,23 +338,24 @@ export default function Workshop() {
                             ],
                             ["11:45 – 12:20", "Keynote Talk: Addison Lin Wang — 360 Vision in the Foundation AI Era: Principles, Methods, and Future Directions"],
                             ["12:20 – 12:35", "Awards Ceremony & Concluding Remarks"],
-                            ].map(([time, event, papers], i) => (
+                            ] as [string, string, string[]?][]
+                        ).map(([time, event, papers], i) => (
                             <tr key={i} className="odd:bg-white even:bg-gray-50">
-                                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                            <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                                 {time}
-                                </td>
-                                <td className="px-4 py-2">
+                            </td>
+                            <td className="px-4 py-2">
                                 <div>{event}</div>
-                                {papers && (
-                                    <ul className="mt-1 list-disc pl-5 text-gray-600 text-xs">
+                                {Array.isArray(papers) && papers.length > 0 && (
+                                <ul className="mt-1 list-disc pl-5 text-gray-600 text-xs">
                                     {papers.map((p, j) => (
-                                        <li key={j}>{p}</li>
+                                    <li key={j}>{p}</li>
                                     ))}
-                                    </ul>
+                                </ul>
                                 )}
-                                </td>
+                            </td>
                             </tr>
-                            ))}
+                        ))}
                         </tbody>
                         </table>
                     </div>
