@@ -171,17 +171,17 @@ const invitedPapers: InvitedPaper[] = [
     {
         title: "Beyond the Frame: Generating 360° Panoramic Videos from Perspective Videos",
         authors: "Rundong Luo",
-        url: "https://openaccess.thecvf.com/content/CVPR2024/papers/Luo_Beyond_the_Frame_Generating_360_Panoramic_Videos_from_Perspective_Videos_CVPR_2024_paper.pdf",
+        url: "https://red-fairy.github.io/argus/",
     },
     {
         title: "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception",
         authors: "Sanjoy Chowdhury",
-        url: "https://openaccess.thecvf.com/content/CVPR2024/papers/Chowdhury_EgoAdapt_Adaptive_Multisensory_Distillation_and_Policy_Learning_for_Efficient_CVPR_2024_paper.pdf",
+        url: "https://arxiv.org/abs/2506.21080",
     },
     {
         title: "Switch-a-View: View Selection Learned from Unlabeled In-the-wild Videos",
         authors: "Sagnik Majumder",
-        url: "https://openaccess.thecvf.com/content/CVPR2024/papers/Majumder_Switch-a-View_View_Selection_Learned_from_Unlabeled_In-the-wild_Videos_CVPR_2024_paper.pdf",
+        url: "https://vision.cs.utexas.edu/projects/switch_a_view/",
     },
 ];
 
@@ -243,12 +243,12 @@ export default function Workshop() {
                         j.jiao@bham.ac.uk
                     </a>
 
-                    <div className="ml-auto flex gap-2">
-                        <a href="#challenge"
-                           className="rounded bg-indigo-600 px-3 py-1 text-white hover:bg-indigo-700">Competitions</a>
-                        <a href="#submission" className="rounded bg-sky-600 px-3 py-1 text-white hover:bg-sky-700">Submission
-                            Portal</a>
-                    </div>
+                    {/*<div className="ml-auto flex gap-2">*/}
+                    {/*    <a href="#challenge"*/}
+                    {/*       className="rounded bg-indigo-600 px-3 py-1 text-white hover:bg-indigo-700">Competitions</a>*/}
+                    {/*    <a href="#submission" className="rounded bg-sky-600 px-3 py-1 text-white hover:bg-sky-700">Submission*/}
+                    {/*        Portal</a>*/}
+                    {/*</div>*/}
                 </div>
                 <nav
                     className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 text-sm font-medium text-gray-700">
@@ -262,7 +262,7 @@ export default function Workshop() {
                             ["Overview", "#overview"],
                             ["Speakers", "#speakers"],
                             ["Programme", "#programme"],
-                            ["Call for Paper Presentations", "#callforpapers"],
+                            ["Paper Presentations", "#invited-papers"],
                             ["Challenge", "#challenge"],
                             ["Organizers", "#organizers"],
                             // ["Dataset", "#dataset"],
@@ -308,12 +308,12 @@ export default function Workshop() {
                             modalities.
                         </p>
                         <div className="mt-8 flex flex-wrap justify-center gap-4">
-                            <a
-                                href="#callforpapers"
-                                className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-white shadow hover:bg-amber-600"
-                            >
-                                Call for Paper Presentations
-                            </a>
+                            {/*<a*/}
+                            {/*    href="#callforpapers"*/}
+                            {/*    className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-white shadow hover:bg-amber-600"*/}
+                            {/*>*/}
+                            {/*    Call for Paper Presentations*/}
+                            {/*</a>*/}
                             <a
                                 href="#challenge"
                                 className="inline-flex items-center gap-2 rounded-lg bg-white/80 px-6 py-3 text-gray-900 shadow hover:bg-white"
@@ -409,30 +409,30 @@ export default function Workshop() {
                     </div>
                 </section>
 
-                {/* ──────────────────────────────── Call for Paper Presentations ───────────────────────── */}
-                <section id="callforpapers" className="mx-auto mt-24 max-w-6xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Call for Paper Presentations</h2>
-                    <p className="mt-6 text-gray-700">
-                        We invite papers from the ICCV 2025 main conference. All of the papers will be with related
-                        research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline August 25th):
-                    </p>
-                    <div className="mt-8 text-center">
-                        <a
-                            href={google_form_url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3
-               text-white shadow hover:bg-indigo-700 transition"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                 className="h-5 w-5" fill="currentColor">
-                                <path
-                                    d="M3.514 11.112l15.665-8.79a1 1 0 011.467 1.049l-2.65 18.94a1 1 0 01-1.71.59l-4.657-5.147-4.858 3.48a.75.75 0 01-1.144-.523L2.17 12.73a1 1 0 01.344-1.618z"/>
-                            </svg>
-                            Submit via&nbsp;Google&nbsp;Form
-                        </a>
-                    </div>
-                </section>
+               {/* /!* ──────────────────────────────── Call for Paper Presentations ───────────────────────── *!/*/}
+               {/* <section id="callforpapers" className="mx-auto mt-24 max-w-6xl px-4">*/}
+               {/*     <h2 className="text-3xl font-bold text-gray-900">Call for Paper Presentations</h2>*/}
+               {/*     <p className="mt-6 text-gray-700">*/}
+               {/*         We invite papers from the ICCV 2025 main conference. All of the papers will be with related*/}
+               {/*         research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline August 25th):*/}
+               {/*     </p>*/}
+               {/*     <div className="mt-8 text-center">*/}
+               {/*         <a*/}
+               {/*             href={google_form_url}*/}
+               {/*             target="_blank"*/}
+               {/*             rel="noreferrer"*/}
+               {/*             className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3*/}
+               {/*text-white shadow hover:bg-indigo-700 transition"*/}
+               {/*         >*/}
+               {/*             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"*/}
+               {/*                  className="h-5 w-5" fill="currentColor">*/}
+               {/*                 <path*/}
+               {/*                     d="M3.514 11.112l15.665-8.79a1 1 0 011.467 1.049l-2.65 18.94a1 1 0 01-1.71.59l-4.657-5.147-4.858 3.48a.75.75 0 01-1.144-.523L2.17 12.73a1 1 0 01.344-1.618z"/>*/}
+               {/*             </svg>*/}
+               {/*             Submit via&nbsp;Google&nbsp;Form*/}
+               {/*         </a>*/}
+               {/*     </div>*/}
+               {/* </section>*/}
 
                 {/* ───────────────────────────────── Invited Paper Presentations ───────────────────────────────── */}
                 <section id="invited-papers" className="mx-auto mt-24 max-w-4xl px-4 text-gray-700">
