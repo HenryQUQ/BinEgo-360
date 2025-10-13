@@ -314,28 +314,47 @@ export default function Workshop() {
                     <h2 className="text-3xl font-bold text-gray-900">Workshop Programme (Half‑day)</h2>
                     <div className="mt-6 overflow-x-auto">
                         <table className="w-full min-w-[480px] divide-y divide-gray-200 text-left text-sm text-gray-700">
-                            <thead className="bg-gray-50">
+                        <thead className="bg-gray-50">
                             <tr>
-                                <th className="px-4 py-2 font-medium">Time</th>
-                                <th className="px-4 py-2 font-medium">Session</th>
+                            <th className="px-4 py-2 font-medium">Time</th>
+                            <th className="px-4 py-2 font-medium">Session</th>
                             </tr>
-                            </thead>
-                            <tbody>
+                        </thead>
+                        <tbody>
                             {[
-                                ["09:00 – 09:30", "Opening Remarks"],
-                                ["09:30 – 10:05", "Keynote Talk 1"],
-                                ["10:05 – 10:40", "Keynote Talk 2"],
-                                ["10:40 – 11:00", "Break & Poster Session"],
-                                ["11:00 – 11:45", "Invited paper Presentations (×3)"],
-                                ["11:45 – 12:20", "Keynote Talk 3"],
-                                ["12:20 – 12:35", "Awards Ceremony & Concluding Remarks"],
-                            ].map(([time, event], i) => (
-                                <tr key={i} className="odd:bg-white even:bg-gray-50">
-                                    <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{time}</td>
-                                    <td className="px-4 py-2">{event}</td>
-                                </tr>
+                            ["09:00 – 09:30", "Opening Remarks"],
+                            ["09:30 – 10:05", "Keynote Talk: Bernard Ghanem — TBD"],
+                            ["10:05 – 10:40", "Keynote Talk: Dima Damen — Video Understanding Out of the Frame: An Egocentric Perspective"],
+                            ["10:40 – 11:00", "Break & Poster Session"],
+                            [
+                                "11:00 – 11:45",
+                                "Invited paper Presentations (×3)",
+                                [
+                                "Beyond the Frame: Generating 360° Panoramic Videos from Perspective Videos — Rundong Luo",
+                                "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception — Sanjoy Chowdhury",
+                                "Switch-a-View: View Selection Learned from Unlabeled In-the-wild Videos — Sagnik Majumder",
+                                ],
+                            ],
+                            ["11:45 – 12:20", "Keynote Talk: Addison Lin Wang — 360 Vision in the Foundation AI Era: Principles, Methods, and Future Directions"],
+                            ["12:20 – 12:35", "Awards Ceremony & Concluding Remarks"],
+                            ].map(([time, event, papers], i) => (
+                            <tr key={i} className="odd:bg-white even:bg-gray-50">
+                                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                                {time}
+                                </td>
+                                <td className="px-4 py-2">
+                                <div>{event}</div>
+                                {papers && (
+                                    <ul className="mt-1 list-disc pl-5 text-gray-600 text-xs">
+                                    {papers.map((p, j) => (
+                                        <li key={j}>{p}</li>
+                                    ))}
+                                    </ul>
+                                )}
+                                </td>
+                            </tr>
                             ))}
-                            </tbody>
+                        </tbody>
                         </table>
                     </div>
                 </section>
