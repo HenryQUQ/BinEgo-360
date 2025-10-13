@@ -300,7 +300,7 @@ export default function Workshop() {
                             BinEgo‑360°: Binocular Egocentric-360° Multi-modal Scene Understanding in the Wild
                         </h1>
                         <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200">
-                            <a href="https://iccv.thecvf.com/virtual/2025/workshop/2749">Venue: Room 306B</a>
+                            <span className="font-semibold text-indigo-200"><a href="https://iccv.thecvf.com/virtual/2025/workshop/2749">Venue: Room 306B</a></span>
                         </p>
                         <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200">
                             Welcome to the <span className="font-semibold text-indigo-200">BinEgo‑360°
