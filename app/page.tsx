@@ -141,6 +141,70 @@ const technical_organizers: Organizer[] = [
 ];
 
 
+interface KeynoteTalk {
+    speaker: string;
+    title: string;
+}
+
+const keynoteTalks: KeynoteTalk[] = [
+    {
+        speaker: "Bernard Ghanem",
+        title: "TBD",
+    },
+    {
+        speaker: "Dima Damen",
+        title: "Video Understanding Out of the Frame: An Egocentric Perspective",
+    },
+    {
+        speaker: "Addison Lin Wang",
+        title: "360 Vision in the Foundation AI Era: Principles, Methods, and Future Directions",
+    },
+];
+
+interface InvitedPaper {
+    title: string;
+    authors: string;
+    url: string;
+}
+
+const invitedPapers: InvitedPaper[] = [
+    {
+        title: "Beyond the Frame: Generating 360° Panoramic Videos from Perspective Videos",
+        authors: "Rundong Luo",
+        url: "https://red-fairy.github.io/argus/",
+    },
+    {
+        title: "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception",
+        authors: "Sanjoy Chowdhury",
+        url: "https://arxiv.org/abs/2506.21080",
+    },
+    {
+        title: "Switch-a-View: View Selection Learned from Unlabeled In-the-wild Videos",
+        authors: "Sagnik Majumder",
+        url: "https://vision.cs.utexas.edu/projects/switch_a_view/",
+    },
+];
+
+const programmeSchedule: Array<[string, string]> = [
+    ["09:00 – 09:30", "Opening Remarks"],
+    [
+        "09:30 – 10:05",
+        `Keynote Talk: ${keynoteTalks[0].speaker} — ${keynoteTalks[0].title}`,
+    ],
+    [
+        "10:05 – 10:40",
+        `Keynote Talk: ${keynoteTalks[1].speaker} — ${keynoteTalks[1].title}`,
+    ],
+    ["10:40 – 11:00", "Break & Poster Session"],
+    ["11:00 – 11:45", "Invited Paper Presentations"],
+    [
+        "11:45 – 12:20",
+        `Keynote Talk: ${keynoteTalks[2].speaker} — ${keynoteTalks[2].title}`,
+    ],
+    ["12:20 – 12:35", "Awards Ceremony & Concluding Remarks"],
+];
+
+
 
 
 export default function Workshop() {
@@ -179,12 +243,12 @@ export default function Workshop() {
                         j.jiao@bham.ac.uk
                     </a>
 
-                    <div className="ml-auto flex gap-2">
-                        <a href="#challenge"
-                           className="rounded bg-indigo-600 px-3 py-1 text-white hover:bg-indigo-700">Competitions</a>
-                        <a href="#submission" className="rounded bg-sky-600 px-3 py-1 text-white hover:bg-sky-700">Submission
-                            Portal</a>
-                    </div>
+                    {/*<div className="ml-auto flex gap-2">*/}
+                    {/*    <a href="#challenge"*/}
+                    {/*       className="rounded bg-indigo-600 px-3 py-1 text-white hover:bg-indigo-700">Competitions</a>*/}
+                    {/*    <a href="#submission" className="rounded bg-sky-600 px-3 py-1 text-white hover:bg-sky-700">Submission*/}
+                    {/*        Portal</a>*/}
+                    {/*</div>*/}
                 </div>
                 <nav
                     className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 text-sm font-medium text-gray-700">
@@ -198,7 +262,7 @@ export default function Workshop() {
                             ["Overview", "#overview"],
                             ["Speakers", "#speakers"],
                             ["Programme", "#programme"],
-                            ["Call for Paper Presentations", "#callforpapers"],
+                            ["Paper Presentations", "#invited-papers"],
                             ["Challenge", "#challenge"],
                             ["Organizers", "#organizers"],
                             // ["Dataset", "#dataset"],
@@ -244,12 +308,12 @@ export default function Workshop() {
                             modalities.
                         </p>
                         <div className="mt-8 flex flex-wrap justify-center gap-4">
-                            <a
-                                href="#callforpapers"
-                                className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-white shadow hover:bg-amber-600"
-                            >
-                                Call for Paper Presentations
-                            </a>
+                            {/*<a*/}
+                            {/*    href="#callforpapers"*/}
+                            {/*    className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-white shadow hover:bg-amber-600"*/}
+                            {/*>*/}
+                            {/*    Call for Paper Presentations*/}
+                            {/*</a>*/}
                             <a
                                 href="#challenge"
                                 className="inline-flex items-center gap-2 rounded-lg bg-white/80 px-6 py-3 text-gray-900 shadow hover:bg-white"
@@ -305,6 +369,19 @@ export default function Workshop() {
                             </div>
                         ))}
                     </div>
+                    <div className="mt-12 text-left text-gray-700">
+                        <h3 className="text-2xl font-semibold text-gray-900">Keynote Talks</h3>
+                        <ul className="mt-4 space-y-3">
+                            {keynoteTalks.map((talk) => (
+                                <li key={talk.speaker}>
+                                    <span className="font-semibold text-gray-900">Keynote Talk:</span>{' '}
+                                    <span className="font-medium text-gray-900">{talk.speaker}</span>
+                                    <span className="text-gray-500"> — </span>
+                                    <span>{talk.title}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </section>
 
 
@@ -319,71 +396,65 @@ export default function Workshop() {
                             <th className="px-4 py-2 font-medium">Time</th>
                             <th className="px-4 py-2 font-medium">Session</th>
                             </tr>
-                        </thead>
-                        <tbody>
-                        {(
-                            [
-                            ["09:00 – 09:30", "Opening Remarks"],
-                            ["09:30 – 10:05", "Keynote Talk: Bernard Ghanem — TBD"],
-                            ["10:05 – 10:40", "Keynote Talk: Dima Damen — Video Understanding Out of the Frame: An Egocentric Perspective"],
-                            ["10:40 – 11:00", "Break & Poster Session"],
-                            [
-                                "11:00 – 11:45",
-                                "Invited paper Presentations (×3)",
-                                [
-                                "Beyond the Frame: Generating 360° Panoramic Videos from Perspective Videos — Rundong Luo",
-                                "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception — Sanjoy Chowdhury",
-                                "Switch-a-View: View Selection Learned from Unlabeled In-the-wild Videos — Sagnik Majumder",
-                                ],
-                            ],
-                            ["11:45 – 12:20", "Keynote Talk: Addison Lin Wang — 360 Vision in the Foundation AI Era: Principles, Methods, and Future Directions"],
-                            ["12:20 – 12:35", "Awards Ceremony & Concluding Remarks"],
-                            ] as [string, string, string[]?][]
-                        ).map(([time, event, papers], i) => (
-                            <tr key={i} className="odd:bg-white even:bg-gray-50">
-                            <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                                {time}
-                            </td>
-                            <td className="px-4 py-2">
-                                <div>{event}</div>
-                                {Array.isArray(papers) && papers.length > 0 && (
-                                <ul className="mt-1 list-disc pl-5 text-gray-600 text-xs">
-                                    {papers.map((p, j) => (
-                                    <li key={j}>{p}</li>
-                                    ))}
-                                </ul>
-                                )}
-                            </td>
-                            </tr>
-                        ))}
-                        </tbody>
+                            </thead>
+                            <tbody>
+                            {programmeSchedule.map(([time, event], i) => (
+                                <tr key={i} className="odd:bg-white even:bg-gray-50">
+                                    <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{time}</td>
+                                    <td className="px-4 py-2">{event}</td>
+                                </tr>
+                            ))}
+                            </tbody>
                         </table>
                     </div>
                 </section>
 
-                {/* ──────────────────────────────── Call for Paper Presentations ───────────────────────── */}
-                <section id="callforpapers" className="mx-auto mt-24 max-w-6xl px-4">
-                    <h2 className="text-3xl font-bold text-gray-900">Call for Paper Presentations</h2>
-                    <p className="mt-6 text-gray-700">
-                        We invite papers from the ICCV 2025 main conference. All of the papers will be with related
-                        research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline August 25th):
+               {/* /!* ──────────────────────────────── Call for Paper Presentations ───────────────────────── *!/*/}
+               {/* <section id="callforpapers" className="mx-auto mt-24 max-w-6xl px-4">*/}
+               {/*     <h2 className="text-3xl font-bold text-gray-900">Call for Paper Presentations</h2>*/}
+               {/*     <p className="mt-6 text-gray-700">*/}
+               {/*         We invite papers from the ICCV 2025 main conference. All of the papers will be with related*/}
+               {/*         research topics to this workshop, and will be reviewed to assess the suitability/relevance to the workshop. If you are interested in presenting your work at our workshop, please fill in this form (submission deadline August 25th):*/}
+               {/*     </p>*/}
+               {/*     <div className="mt-8 text-center">*/}
+               {/*         <a*/}
+               {/*             href={google_form_url}*/}
+               {/*             target="_blank"*/}
+               {/*             rel="noreferrer"*/}
+               {/*             className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3*/}
+               {/*text-white shadow hover:bg-indigo-700 transition"*/}
+               {/*         >*/}
+               {/*             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"*/}
+               {/*                  className="h-5 w-5" fill="currentColor">*/}
+               {/*                 <path*/}
+               {/*                     d="M3.514 11.112l15.665-8.79a1 1 0 011.467 1.049l-2.65 18.94a1 1 0 01-1.71.59l-4.657-5.147-4.858 3.48a.75.75 0 01-1.144-.523L2.17 12.73a1 1 0 01.344-1.618z"/>*/}
+               {/*             </svg>*/}
+               {/*             Submit via&nbsp;Google&nbsp;Form*/}
+               {/*         </a>*/}
+               {/*     </div>*/}
+               {/* </section>*/}
+
+                {/* ───────────────────────────────── Invited Paper Presentations ───────────────────────────────── */}
+                <section id="invited-papers" className="mx-auto mt-24 max-w-4xl px-4 text-gray-700">
+                    <h2 className="text-3xl font-bold text-gray-900">Invited Paper Presentations</h2>
+                    <p className="mt-6">
+                        Explore the invited papers that will be highlighted during the dedicated presentation session.
                     </p>
-                    <div className="mt-8 text-center">
-                        <a
-                            href={google_form_url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3
-               text-white shadow hover:bg-indigo-700 transition"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                 className="h-5 w-5" fill="currentColor">
-                                <path
-                                    d="M3.514 11.112l15.665-8.79a1 1 0 011.467 1.049l-2.65 18.94a1 1 0 01-1.71.59l-4.657-5.147-4.858 3.48a.75.75 0 01-1.144-.523L2.17 12.73a1 1 0 01.344-1.618z"/>
-                            </svg>
-                            Submit via&nbsp;Google&nbsp;Form
-                        </a>
-                    </div>
+                    <ul className="mt-6 list-disc space-y-3 pl-6">
+                        {invitedPapers.map((paper) => (
+                            <li key={paper.title}>
+                                <a
+                                    href={paper.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="font-semibold text-indigo-700 hover:text-indigo-900 hover:underline"
+                                >
+                                    {paper.title}
+                                </a>
+                                <span className="block text-sm text-gray-600">{paper.authors}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </section>
 
                 {/* ───────────────────────────────── Challenge ───────────── */}
