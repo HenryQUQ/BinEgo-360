@@ -141,6 +141,19 @@ const technical_organizers: Organizer[] = [
 ];
 
 
+const keynoteTalks = [
+    "Keynote Talk (1): Bernard Ghanem — TBD",
+    "Keynote Talk (2): Dima Damen — Video Understanding Out of the Frame: An Egocentric Perspective",
+    "Keynote Talk (3): Addison Lin Wang — 360 Vision in the Foundation AI Era: Principles, Methods, and Future Directions",
+];
+
+const invitedPapers = [
+    "Beyond the Frame: Generating 360° Panoramic Videos from Perspective Videos — Rundong Luo",
+    "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception — Sanjoy Chowdhury",
+    "Switch-a-View: View Selection Learned from Unlabeled In-the-wild Videos — Sagnik Majumder",
+];
+
+
 
 
 export default function Workshop() {
@@ -321,13 +334,13 @@ export default function Workshop() {
                             </tr>
                             </thead>
                             <tbody>
-                            {[
+                            {[ 
                                 ["09:00 – 09:30", "Opening Remarks"],
-                                ["09:30 – 10:05", "Keynote Talk 1"],
-                                ["10:05 – 10:40", "Keynote Talk 2"],
+                                ["09:30 – 10:05", "Keynote Talk (1): Bernard Ghanem — TBD"],
+                                ["10:05 – 10:40", "Keynote Talk (2): Dima Damen — Video Understanding Out of the Frame: An Egocentric Perspective"],
                                 ["10:40 – 11:00", "Break & Poster Session"],
-                                ["11:00 – 11:45", "Invited paper Presentations (×3)"],
-                                ["11:45 – 12:20", "Keynote Talk 3"],
+                                ["11:00 – 11:45", "Invited Paper Presentations"],
+                                ["11:45 – 12:20", "Keynote Talk (3): Addison Lin Wang — 360 Vision in the Foundation AI Era: Principles, Methods, and Future Directions"],
                                 ["12:20 – 12:35", "Awards Ceremony & Concluding Remarks"],
                             ].map(([time, event], i) => (
                                 <tr key={i} className="odd:bg-white even:bg-gray-50">
@@ -337,6 +350,24 @@ export default function Workshop() {
                             ))}
                             </tbody>
                         </table>
+                    </div>
+                    <div className="mt-8 space-y-8 text-gray-700">
+                        <div>
+                            <h3 className="text-2xl font-semibold text-gray-900">Keynote Talks</h3>
+                            <ul className="mt-4 space-y-2 list-disc pl-6">
+                                {keynoteTalks.map((talk) => (
+                                    <li key={talk}>{talk}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-semibold text-gray-900">Invited Paper Presentations</h3>
+                            <ul className="mt-4 space-y-2 list-disc pl-6">
+                                {invitedPapers.map((paper) => (
+                                    <li key={paper}>{paper}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
