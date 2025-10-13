@@ -231,7 +231,7 @@ export default function Workshop() {
                             <path
                                 d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 112.5-2.5 2.503 2.503 0 01-2.5 2.5z"/>
                         </svg>
-                        Hawaii Convention Center, Honolulu HI, USA, Room 306 B
+                        Room 306 B, Hawaii Convention Center, Honolulu HI, USA
                     </div>
                     <div className="flex items-center gap-1">
                         <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
