@@ -494,9 +494,6 @@ export default function Workshop() {
                                                         {isInvited && (
                                                             <div className="rounded-2xl bg-amber-50/80 p-5 text-sm text-gray-700 shadow-inner ring-1 ring-amber-100">
                                                                 <div className="flex flex-wrap items-center gap-3">
-                                                                    <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-amber-700">
-                                                                        Invited Session
-                                                                    </span>
                                                                     <span className="text-base font-semibold text-[#2E33B2]">
                                                                         {event}
                                                                     </span>
