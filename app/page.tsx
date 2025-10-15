@@ -149,7 +149,7 @@ interface KeynoteTalk {
 const keynoteTalks: KeynoteTalk[] = [
     {
         speaker: "Bernard Ghanem",
-        title: "TBD",
+        title: "Towards Robust Multimodal Egocentric Video Understanding",
     },
     {
         speaker: "Dima Damen",
