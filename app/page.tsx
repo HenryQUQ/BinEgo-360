@@ -443,7 +443,7 @@ export default function Workshop() {
                     </div>
                 </section>
                 {/* ───────────────────────────────── Programme ───────────────────────── */}
-                <section id="programme" className="mx-auto mt-24 max-w-5xl px-4">
+                <section id="programme" className="mx-auto mt-24 max-w-6xl px-4 lg:max-w-7xl">
                     <div className="rounded-3xl bg-white/95 p-8 shadow-2xl ring-1 ring-indigo-100 backdrop-blur-sm">
                         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                             <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
@@ -457,7 +457,7 @@ export default function Workshop() {
                             </span>
                         </div>
                         <div className="mt-6 overflow-x-auto">
-                            <table className="w-full min-w-[560px] text-left text-base text-gray-900">
+                            <table className="w-full min-w-[640px] text-left text-base text-gray-900">
                                 <thead className="bg-indigo-600/90 text-white">
                                     <tr>
                                         <th className="whitespace-nowrap px-6 py-3 text-lg font-semibold tracking-wide">Time</th>
@@ -474,7 +474,7 @@ export default function Workshop() {
                                                 <td className="whitespace-nowrap px-6 py-4 text-lg font-semibold text-indigo-700">
                                                     {time}
                                                 </td>
-                                                <td className={`px-6 py-4 align-top text-base text-gray-900 ${isInvited ? '' : 'whitespace-nowrap'}`}>
+                                                <td className="px-6 py-4 align-top text-base text-gray-900">
                                                     <div className="space-y-4">
                                                         {isKeynote ? (
                                                             <span className="inline-flex items-baseline gap-2 whitespace-nowrap font-semibold text-indigo-800">
@@ -484,19 +484,35 @@ export default function Workshop() {
                                                                 {event.replace("Keynote Talk:", "").trim()}
                                                             </span>
                                                         ) : (
-                                                            <span className={`inline-flex items-center gap-2 font-semibold ${isInvited ? 'text-indigo-800' : 'whitespace-nowrap'}`}>
-                                                                {isInvited && (
-                                                                    <span className="rounded-full bg-amber-500/20 px-2 py-1 text-xs font-bold uppercase tracking-wide text-amber-600">
-                                                                        Invited session
-                                                                    </span>
-                                                                )}
-                                                                {event}
-                                                            </span>
+                                                            !isInvited && (
+                                                                <span className="font-semibold text-gray-900">
+                                                                    {event}
+                                                                </span>
+                                                            )
                                                         )}
 
                                                         {isInvited && (
-                                                            <div className="rounded-2xl bg-amber-50/70 p-4 text-sm text-gray-700 shadow-inner ring-1 ring-amber-100">
-                                                                <ul className="space-y-3 leading-relaxed md:text-base">
+                                                            <div className="rounded-2xl bg-amber-50/80 p-5 text-sm text-gray-700 shadow-inner ring-1 ring-amber-100">
+                                                                <div className="flex items-center gap-2 text-[#2E33B2]">
+                                                                    <svg
+                                                                        className="h-4 w-4"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor"
+                                                                        strokeWidth="1.5"
+                                                                    >
+                                                                        <path
+                                                                            strokeLinecap="round"
+                                                                            strokeLinejoin="round"
+                                                                            d="M3 6.75h18M5.25 6.75V18A2.25 2.25 0 0 0 7.5 20.25h9a2.25 2.25 0 0 0 2.25-2.25V6.75M9 6.75V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5v2.25"
+                                                                        />
+                                                                    </svg>
+                                                                    <span className="text-2xl font-bold">
+                                                                        {event}
+                                                                    </span>
+                                                                </div>
+                                                                <ul className="mt-4 space-y-3 leading-relaxed md:text-base">
                                                                     {invitedPapers.map((paper, j) => (
                                                                         <li key={j} className="space-y-1">
                                                                             <a
