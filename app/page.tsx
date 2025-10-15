@@ -176,7 +176,7 @@ const invitedPapers: InvitedPaper[] = [
     {
         title: "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception",
         authors: "Presenter: Sanjoy Chowdhury",
-        url: "https://arxiv.org/abs/2506.21080",
+        url: "https://schowdhury671.github.io/egoadapt_project/",
     },
     {
         title: "Switch-a-View: View Selection Learned from Unlabeled In-the-wild Videos",
@@ -300,9 +300,6 @@ export default function Workshop() {
                             BinEgo‑360°: Binocular Egocentric-360° Multi-modal Scene Understanding in the Wild
                         </h1>
                         <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200">
-                            <span className="font-semibold text-indigo-200"><a href="https://iccv.thecvf.com/virtual/2025/workshop/2749">Venue: Room 306B</a></span>
-                        </p>
-                        <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200">
                             Welcome to the <span className="font-semibold text-indigo-200">BinEgo‑360°
             Workshop & Challenge</span> at ICCV 2025. We bring together researchers working on
                             {' '}<strong>360° panoramic</strong> and <strong>binocular egocentric</strong> vision to
@@ -310,18 +307,90 @@ export default function Workshop() {
                             human‑like perception across <em>video</em>, <em>audio</em>, and <em>geo‑spatial</em>{' '}
                             modalities.
                         </p>
-                        <div className="mt-8 flex flex-wrap justify-center gap-4">
-                            {/*<a*/}
-                            {/*    href="#callforpapers"*/}
-                            {/*    className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-white shadow hover:bg-amber-600"*/}
-                            {/*>*/}
-                            {/*    Call for Paper Presentations*/}
-                            {/*</a>*/}
+                        <div className="mt-10 flex flex-wrap justify-center gap-4">
+                            <a
+                                href="https://media.eventhosts.cc/Conferences/ICCV2025/iccv25_workshops_tutorials.pdf#page=40"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2"
+                            >
+                                <svg
+                                    className="h-4 w-4"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth="1.5"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M12 21s-7-4.686-7-11a7 7 0 1 1 14 0c0 6.314-7 11-7 11zm0-9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+                                    />
+                                </svg>
+                                Venue: Room&nbsp;306B
+                            </a>
+                            <a
+                                href="https://iccv.thecvf.com/virtual/2025/workshop/2749"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2"
+                            >
+                                <svg
+                                    className="h-4 w-4"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth="1.5"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-9A2.25 2.25 0 0 0 2.25 5.25v13.5A2.25 2.25 0 0 0 4.5 21h9a2.25 2.25 0 0 0 2.25-2.25V15l6 3.75V5.25L15.75 9z"
+                                    />
+                                </svg>
+                                Join online
+                            </a>
+                            <a
+                                href="#programme"
+                                className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/90 px-6 py-3 text-sm font-semibold text-gray-900 shadow-lg transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+                            >
+                                <svg
+                                    className="h-4 w-4"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth="1.5"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M8.25 6.75h7.5m-7.5 3h7.5m-7.5 3h4.5M6.75 5.25A2.25 2.25 0 0 0 4.5 7.5v9A2.25 2.25 0 0 0 6.75 18.75h10.5A2.25 2.25 0 0 0 19.5 16.5v-9a2.25 2.25 0 0 0-2.25-2.25H6.75z"
+                                    />
+                                </svg>
+                                View programme
+                            </a>
                             <a
                                 href="#challenge"
-                                className="inline-flex items-center gap-2 rounded-lg bg-white/80 px-6 py-3 text-gray-900 shadow hover:bg-white"
+                                className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2"
                             >
-                                Participate in Challenge
+                                <svg
+                                    className="h-4 w-4"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth="1.5"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M16.5 3.75h2.25A1.25 1.25 0 0 1 20 5v2.25a3.75 3.75 0 0 1-3.75 3.75L16 11.5a4.5 4.5 0 0 1-3.75 3.7V18h2.25a.75.75 0 1 1 0 1.5H9.5A.75.75 0 1 1 9.5 18H11v-2.8A4.5 4.5 0 0 1 7.25 11.5l-.25-.5A3.75 3.75 0 0 1 3.25 7.25V5a1.25 1.25 0 0 1 1.25-1.25H6.75a.75.75 0 0 1 .75.75v4a2.25 2.25 0 1 0 4.5 0v-4a.75.75 0 0 1 .75-.75H15a.75.75 0 0 1 .75.75v4a2.25 2.25 0 1 0 4.5 0v-4a.75.75 0 0 1 .75-.75Z"
+                                    />
+                                </svg>
+                                Participate in challenge
                             </a>
                         </div>
                     </div>
@@ -374,65 +443,87 @@ export default function Workshop() {
                     </div>
                 </section>
                 {/* ───────────────────────────────── Programme ───────────────────────── */}
-                <section id="programme" className="mx-auto mt-24 max-w-4xl px-4">
-                <h2 className="text-3xl font-bold text-gray-900">Workshop Programme (Half‑day)</h2>
-                <div className="mt-6 overflow-x-auto">
-                <table className="w-full min-w-[480px] divide-y divide-gray-200 text-left text-sm text-gray-700">
-                    <thead className="bg-gray-50">
-                    <tr>
-                        <th className="px-4 py-2 font-medium">Time</th>
-                        <th className="px-4 py-2 font-medium">Session</th>
-                    </tr>
-                    </thead>
+                <section id="programme" className="mx-auto mt-24 max-w-5xl px-4">
+                    <div className="rounded-3xl bg-white/95 p-8 shadow-2xl ring-1 ring-indigo-100 backdrop-blur-sm">
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                            <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
+                                Workshop Programme (Half‑day)
+                            </h2>
+                            <span className="inline-flex items-center gap-2 self-start rounded-full bg-indigo-600/10 px-4 py-2 text-sm font-semibold text-indigo-700 ring-1 ring-indigo-200">
+                                <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 6.75h7.5M8.25 10.5h7.5m-7.5 3.75h4.5m7.5-1.5A2.25 2.25 0 0 1 19.5 18v1.5A2.25 2.25 0 0 1 17.25 21H6.75A2.25 2.25 0 0 1 4.5 18.75V18a2.25 2.25 0 0 1 2.25-2.25h12.75Zm0-9.75V6A2.25 2.25 0 0 1 19.5 8.25H4.5A2.25 2.25 0 0 1 2.25 6V4.5A2.25 2.25 0 0 1 4.5 2.25h15A2.25 2.25 0 0 1 21.75 4.5V6Z" />
+                                </svg>
+                                Room 306B · 19 Oct 2025
+                            </span>
+                        </div>
+                        <div className="mt-6 overflow-x-auto">
+                            <table className="w-full min-w-[560px] text-left text-base text-gray-900">
+                                <thead className="bg-indigo-600/90 text-white">
+                                    <tr>
+                                        <th className="whitespace-nowrap px-6 py-3 text-lg font-semibold tracking-wide">Time</th>
+                                        <th className="px-6 py-3 text-lg font-semibold tracking-wide">Session</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-indigo-100">
+                                    {programmeSchedule.map(([time, event], i) => {
+                                        const isKeynote = event.startsWith("Keynote Talk:");
+                                        const isInvited = event.includes("Invited Paper Presentations");
 
-                    <tbody>
-                    {programmeSchedule.map(([time, event], i) => {
-                        const isKeynote = event.startsWith("Keynote Talk:");
-                        const isInvited = event.includes("Invited Paper Presentations");
+                                        return (
+                                            <tr key={i} className="odd:bg-white even:bg-indigo-50/40 align-top">
+                                                <td className="whitespace-nowrap px-6 py-4 text-lg font-semibold text-indigo-700">
+                                                    {time}
+                                                </td>
+                                                <td className={`px-6 py-4 align-top text-base text-gray-900 ${isInvited ? '' : 'whitespace-nowrap'}`}>
+                                                    <div className="space-y-4">
+                                                        {isKeynote ? (
+                                                            <span className="inline-flex items-baseline gap-2 whitespace-nowrap font-semibold text-indigo-800">
+                                                                <span className="rounded-full bg-indigo-600/15 px-2 py-1 text-xs font-bold uppercase tracking-wide text-indigo-700">
+                                                                    Keynote
+                                                                </span>
+                                                                {event.replace("Keynote Talk:", "").trim()}
+                                                            </span>
+                                                        ) : (
+                                                            <span className={`inline-flex items-center gap-2 font-semibold ${isInvited ? 'text-indigo-800' : 'whitespace-nowrap'}`}>
+                                                                {isInvited && (
+                                                                    <span className="rounded-full bg-amber-500/20 px-2 py-1 text-xs font-bold uppercase tracking-wide text-amber-600">
+                                                                        Invited session
+                                                                    </span>
+                                                                )}
+                                                                {event}
+                                                            </span>
+                                                        )}
 
-                        return (
-                        <tr key={i} className="odd:bg-white even:bg-gray-50 align-top">
-                            <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                            {time}
-                            </td>
-                            <td className="px-4 py-2">
-                            {/* ✅ Keynote 加粗 */}
-                            {isKeynote ? (
-                                <>
-                                <strong>Keynote Talk:</strong>{" "}
-                                {event.replace("Keynote Talk:", "").trim()}
-                                </>
-                            ) : (
-                                event
-                            )}
-
-                            {/* ✅ Invited Paper 子列表 */}
-                            {isInvited && (
-                                <ul className="mt-2 list-disc pl-5 text-gray-600 text-xs space-y-1">
-                                {invitedPapers.map((paper, j) => (
-                                    <li key={j}>
-                                    <a
-                                        href={paper.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="font-medium text-blue-600 hover:underline"
-                                    >
-                                        {paper.title}
-                                    </a>
-                                    <div className="text-gray-500 italic">
-                                        {paper.authors}
-                                    </div>
-                                    </li>
-                                ))}
-                                </ul>
-                            )}
-                            </td>
-                        </tr>
-                        );
-                    })}
-                    </tbody>
-                </table>
-                </div>
+                                                        {isInvited && (
+                                                            <div className="rounded-2xl bg-amber-50/70 p-4 text-sm text-gray-700 shadow-inner ring-1 ring-amber-100">
+                                                                <ul className="space-y-3 leading-relaxed md:text-base">
+                                                                    {invitedPapers.map((paper, j) => (
+                                                                        <li key={j} className="space-y-1">
+                                                                            <a
+                                                                                href={paper.url}
+                                                                                target="_blank"
+                                                                                rel="noopener noreferrer"
+                                                                                className="font-semibold text-amber-700 hover:text-amber-800 hover:underline"
+                                                                            >
+                                                                                {paper.title}
+                                                                            </a>
+                                                                            <div className="text-sm italic text-gray-600 md:text-base">
+                                                                                {paper.authors}
+                                                                            </div>
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        );
+                                    })}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </section>
 
 
