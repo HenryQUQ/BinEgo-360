@@ -493,22 +493,11 @@ export default function Workshop() {
 
                                                         {isInvited && (
                                                             <div className="rounded-2xl bg-amber-50/80 p-5 text-sm text-gray-700 shadow-inner ring-1 ring-amber-100">
-                                                                <div className="flex items-center gap-2 text-[#2E33B2]">
-                                                                    <svg
-                                                                        className="h-4 w-4"
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        fill="none"
-                                                                        viewBox="0 0 24 24"
-                                                                        stroke="currentColor"
-                                                                        strokeWidth="1.5"
-                                                                    >
-                                                                        <path
-                                                                            strokeLinecap="round"
-                                                                            strokeLinejoin="round"
-                                                                            d="M3 6.75h18M5.25 6.75V18A2.25 2.25 0 0 0 7.5 20.25h9a2.25 2.25 0 0 0 2.25-2.25V6.75M9 6.75V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5v2.25"
-                                                                        />
-                                                                    </svg>
-                                                                    <span className="text-2xl font-bold">
+                                                                <div className="flex flex-wrap items-center gap-3">
+                                                                    <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-amber-700">
+                                                                        Invited Session
+                                                                    </span>
+                                                                    <span className="text-base font-semibold text-[#2E33B2]">
                                                                         {event}
                                                                     </span>
                                                                 </div>
