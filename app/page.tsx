@@ -835,21 +835,89 @@ export default function Workshop() {
                 <section id="prizes" className="mx-auto mt-24 max-w-4xl px-4">
                     <h2 className="text-3xl font-bold text-gray-900">Prizes & Sponsors</h2>
                     <ul className="mt-6 space-y-2 text-gray-700">
-                        <li><strong>Hardware:</strong> Insta360 X5 panoramic camera (<a href="https://www.insta360.com/"
-                                                                                        target="_blank" rel="noreferrer"
-                                                                                        className="text-indigo-600 hover:underline">Insta360</a>)
+                        <li>
+                            <strong>1st Place:</strong>{' '}
+                            Insta360 X5 camera (
+                            <a
+                                href="https://www.insta360.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-indigo-600 hover:underline"
+                            >
+                                Insta360
+                            </a>
+                            ) + Workshop registration (
+                            <a
+                                href="https://www.tencent.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-indigo-600 hover:underline"
+                            >
+                                Tencent
+                            </a>
+                            ) + £10k Cloud GPU credit (
+                            <a
+                                href="https://www.scan.co.uk/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-indigo-600 hover:underline"
+                            >
+                                SCAN
+                            </a>
+                            )
                         </li>
-                        <li><strong>Compute:</strong> GPU Cloud Credit (worth £5-15k) (<a href="https://www.scan.co.uk/"
-                                                                                          target="_blank"
-                                                                                          rel="noreferrer"
-                                                                                          className="text-indigo-600 hover:underline">SCAN</a>)</li>
-                        <li><strong>Gift:</strong> Amazon / Taobao vouchers (<a href="https://www.allsee-tech.com/"
-                                                                                target="_blank" rel="noreferrer"
-                                                                                className="text-indigo-600 hover:underline">Allsee</a>)
+                        <li>
+                            <strong>2nd Place:</strong>{' '}
+                            £10k Cloud GPU credit (
+                            <a
+                                href="https://www.scan.co.uk/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-indigo-600 hover:underline"
+                            >
+                                SCAN
+                            </a>
+                            ) + Workshop registration (
+                            <a
+                                href="https://www.tencent.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-indigo-600 hover:underline"
+                            >
+                                Tencent
+                            </a>
+                            ) + £100 voucher (
+                            <a
+                                href="https://www.allsee-tech.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-indigo-600 hover:underline"
+                            >
+                                Allsee
+                            </a>
+                            )
                         </li>
-                        <li><strong>Registration:</strong> Workshop fee for the 1st &amp; 2nd winners on each track (<a
-                            href="https://www.tencent.com/" target="_blank" rel="noreferrer"
-                            className="text-indigo-600 hover:underline">Tencent</a>)
+                        <li>
+                            <strong>3rd Place:</strong>{' '}
+                            £5k Cloud GPU credit (
+                            <a
+                                href="https://www.scan.co.uk/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-indigo-600 hover:underline"
+                            >
+                                SCAN
+                            </a>
+                            ) + £50 voucher (
+                            <a
+                                href="https://www.allsee-tech.com/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-indigo-600 hover:underline"
+                            >
+                                Allsee
+                            </a>
+                            )
                         </li>
                     </ul>
                     <p className="mt-4 text-gray-700">
