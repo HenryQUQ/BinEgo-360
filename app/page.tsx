@@ -793,7 +793,62 @@ export default function Workshop() {
                         {/*    </div>*/}
                         {/*</div>*/}
                     </div>
+
+                    <div className="mt-10 space-y-6">
+                        <h3 className="text-2xl font-semibold text-gray-900">🏆 Competition Winners</h3>
+                        <p className="text-gray-700">
+                            Congratulations to the teams whose solutions topped the CLS and TAL tracks of the BinEgo-360
+                            Challenge. Explore the podium finishers and their affiliations below.
+                        </p>
+                        <div className="grid gap-6 md:grid-cols-2">
+                            <div className="rounded-lg border border-gray-200 p-6 shadow-sm">
+                                <h4 className="text-xl font-semibold text-gray-900">CLS Track</h4>
+                                <ol className="mt-4 space-y-4 text-gray-700">
+                                    <li className="rounded-md bg-gray-50 p-4">
+                                        <p className="text-lg font-semibold text-gray-900">1st Place</p>
+                                        <p>Xudong Cao, Lei Hei, Xudong Wang, and Liangqu Long</p>
+                                        <p className="text-sm text-gray-600">Corresponding Author: Liangqu Long</p>
+                                        <p className="text-sm text-gray-600">Team: Insta360 ML2</p>
+                                    </li>
+                                    <li className="rounded-md bg-gray-50 p-4">
+                                        <p className="text-lg font-semibold text-gray-900">2nd Place</p>
+                                        <p>Rishav Sanjay</p>
+                                        <p className="text-sm text-gray-600">RV University Bengaluru</p>
+                                        <p className="text-sm text-gray-600">Team: EigenAdapt</p>
+                                    </li>
+                                    <li className="rounded-md bg-gray-50 p-4">
+                                        <p className="text-lg font-semibold text-gray-900">3rd Place</p>
+                                        <p>Paul Ng’ang’a Kamau</p>
+                                        <p className="text-sm text-gray-600">Kenyatta University &amp; Moringa School</p>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div className="rounded-lg border border-gray-200 p-6 shadow-sm">
+                                <h4 className="text-xl font-semibold text-gray-900">TAL Track</h4>
+                                <ol className="mt-4 space-y-4 text-gray-700">
+                                    <li className="rounded-md bg-gray-50 p-4">
+                                        <p className="text-lg font-semibold text-gray-900">1st Place</p>
+                                        <p>Duong Anh Kiet and Petra Gomez-Krämer</p>
+                                        <p className="text-sm text-gray-600">L3i Laboratory, La Rochelle University</p>
+                                        <p className="text-sm text-gray-600">Team: L3I</p>
+                                    </li>
+                                    <li className="rounded-md bg-gray-50 p-4">
+                                        <p className="text-lg font-semibold text-gray-900">2nd Place</p>
+                                        <p>Paul Ng’ang’a Kamau</p>
+                                        <p className="text-sm text-gray-600">Kenyatta University &amp; Moringa School</p>
+                                    </li>
+                                    <li className="rounded-md bg-gray-50 p-4">
+                                        <p className="text-lg font-semibold text-gray-900">3rd Place</p>
+                                        <p>Chan U Wang 陳裕弘</p>
+                                        <p className="text-sm text-gray-600">University of Macau</p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
                 </section>
+
+
 
                 {/* ───────────────────────────────── Timeline ───────────────────────── */}
                 <section id="timeline" className="mx-auto mt-24 max-w-4xl px-4">
@@ -924,58 +979,6 @@ export default function Workshop() {
                         Sponsored by <a href="https://www.insta360.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Insta360</a> &middot; <a href="https://www.scan.co.uk/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">SCAN</a> &middot; <a href="https://www.allsee-tech.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Allsee</a> &middot; <a href="https://www.tencent.com/" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">Tencent</a>
                     </p>
 
-                    <div className="mt-10 space-y-6">
-                        <h3 className="text-2xl font-semibold text-gray-900">Competition Winners</h3>
-                        <p className="text-gray-700">
-                            Congratulations to the teams whose solutions topped the CLS and TAL tracks of the BinEgo-360
-                            Challenge. Explore the podium finishers and their affiliations below.
-                        </p>
-                        <div className="grid gap-6 md:grid-cols-2">
-                            <div className="rounded-lg border border-gray-200 p-6 shadow-sm">
-                                <h4 className="text-xl font-semibold text-gray-900">CLS Track</h4>
-                                <ol className="mt-4 space-y-4 text-gray-700">
-                                    <li className="rounded-md bg-gray-50 p-4">
-                                        <p className="text-lg font-semibold text-gray-900">1st Place</p>
-                                        <p>Xudong Cao, Lei Hei, Xudong Wang, and Liangqu Long</p>
-                                        <p className="text-sm text-gray-600">Corresponding Author: Liangqu Long</p>
-                                        <p className="text-sm text-gray-600">Team: Insta360 ML2</p>
-                                    </li>
-                                    <li className="rounded-md bg-gray-50 p-4">
-                                        <p className="text-lg font-semibold text-gray-900">2nd Place</p>
-                                        <p>Rishav Sanjay</p>
-                                        <p className="text-sm text-gray-600">RV University Bengaluru</p>
-                                        <p className="text-sm text-gray-600">Team: EigenAdapt</p>
-                                    </li>
-                                    <li className="rounded-md bg-gray-50 p-4">
-                                        <p className="text-lg font-semibold text-gray-900">3rd Place</p>
-                                        <p>Paul Ng’ang’a Kamau</p>
-                                        <p className="text-sm text-gray-600">Kenyatta University &amp; Moringa School</p>
-                                    </li>
-                                </ol>
-                            </div>
-                            <div className="rounded-lg border border-gray-200 p-6 shadow-sm">
-                                <h4 className="text-xl font-semibold text-gray-900">TAL Track</h4>
-                                <ol className="mt-4 space-y-4 text-gray-700">
-                                    <li className="rounded-md bg-gray-50 p-4">
-                                        <p className="text-lg font-semibold text-gray-900">1st Place</p>
-                                        <p>Duong Anh Kiet and Petra Gomez-Krämer</p>
-                                        <p className="text-sm text-gray-600">L3i Laboratory, La Rochelle University</p>
-                                        <p className="text-sm text-gray-600">Team: L3I</p>
-                                    </li>
-                                    <li className="rounded-md bg-gray-50 p-4">
-                                        <p className="text-lg font-semibold text-gray-900">2nd Place</p>
-                                        <p>Paul Ng’ang’a Kamau</p>
-                                        <p className="text-sm text-gray-600">Kenyatta University &amp; Moringa School</p>
-                                    </li>
-                                    <li className="rounded-md bg-gray-50 p-4">
-                                        <p className="text-lg font-semibold text-gray-900">3rd Place</p>
-                                        <p>Chan U Wang 陳裕弘</p>
-                                        <p className="text-sm text-gray-600">University of Macau</p>
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
                 </section>
 
 
