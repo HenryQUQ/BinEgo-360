@@ -2,6 +2,7 @@ import Head from "next/head";
 
 const test = false;
 const root_path = test ? '' : '/BinEgo-360';
+const pdfPath = (filename: string): string => encodeURI(`${root_path}/pdfs/${filename}`);
 /* ─────────────── Static assets ─────────────── */
 const favicon_path = `${root_path}/favicon.ico`;
 const sponsor_allsee_path = `${root_path}/allsee-logo.jpg`;
@@ -144,20 +145,30 @@ const technical_organizers: Organizer[] = [
 interface KeynoteTalk {
     speaker: string;
     title: string;
+    slides?: string;
+    slidesComingSoon?: boolean;
+    recordingUrl?: string;
+    recordingComingSoon?: boolean;
 }
 
 const keynoteTalks: KeynoteTalk[] = [
     {
         speaker: "Bernard Ghanem",
         title: "Towards Robust Multimodal Egocentric Video Understanding",
+        slidesComingSoon: true,
+        recordingComingSoon: true,
     },
     {
         speaker: "Dima Damen",
         title: "Video Understanding Out of the Frame: An Egocentric Perspective",
+        slides: pdfPath("Ego360-ICCV2025-Workshop-DimaDamen.pdf"),
+        recordingComingSoon: true,
     },
     {
         speaker: "Addison Lin Wang",
         title: "360 Vision in the Foundation AI Era: Principles, Methods, and Future Directions",
+        slides: pdfPath("360-vision in foundation AI era-ICCV2025 - Addison Wang.pdf"),
+        recordingComingSoon: true,
     },
 ];
 
@@ -165,6 +176,7 @@ interface InvitedPaper {
     title: string;
     authors: string;
     url: string;
+    slides?: string;
 }
 
 const invitedPapers: InvitedPaper[] = [
@@ -172,18 +184,112 @@ const invitedPapers: InvitedPaper[] = [
         title: "Beyond the Frame: Generating 360° Panoramic Videos from Perspective Videos",
         authors: "Presenter: Rundong Luo",
         url: "https://red-fairy.github.io/argus/",
+        slides: pdfPath("iccv_presentation_RundongLuo.pdf"),
     },
     {
         title: "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception",
         authors: "Presenter: Sanjoy Chowdhury",
         url: "https://schowdhury671.github.io/egoadapt_project/",
+        slides: pdfPath("[InvitedPaperPresentation] EgoAdapt - BinEgo360.pdf"),
     },
     {
         title: "Switch-a-View: View Selection Learned from Unlabeled In-the-wild Videos",
         authors: "Presenter: Sagnik Majumder",
         url: "https://vision.cs.utexas.edu/projects/switch_a_view/",
+        slides: pdfPath("[InvitedPaperPresentation] binEgoICCV_sagnikMajumder.pdf"),
     },
 ];
+
+interface ResourceLinksProps {
+    slidesUrl?: string;
+    showSlidesComingSoon?: boolean;
+    recordingUrl?: string;
+    showRecordingComingSoon?: boolean;
+    inline?: boolean;
+    className?: string;
+}
+
+const ResourceLinks = ({
+    slidesUrl,
+    showSlidesComingSoon = false,
+    recordingUrl,
+    showRecordingComingSoon = false,
+    inline = false,
+    className = "",
+}: ResourceLinksProps) => {
+    if (!slidesUrl && !recordingUrl && !showSlidesComingSoon && !showRecordingComingSoon) {
+        return null;
+    }
+
+    const containerBase = inline
+        ? "flex flex-wrap items-center gap-2 text-xs font-semibold"
+        : "flex flex-wrap gap-2 pt-2 text-xs font-semibold";
+    const containerClasses = className ? `${containerBase} ${className}` : containerBase;
+
+    const placeholderButton = (label: string) => (
+        <button
+            type="button"
+            className="inline-flex cursor-not-allowed items-center gap-1 rounded-full border border-dashed border-gray-300 px-3 py-1 text-gray-500"
+            title="Available soon"
+            aria-label={`${label} available soon`}
+        >
+            {label === "Slides" ? (
+                <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                </svg>
+            ) : (
+                <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M10 9l5 3-5 3V9z"/>
+                </svg>
+            )}
+            {label}
+        </button>
+    );
+
+    return (
+        <div className={containerClasses}>
+            {slidesUrl ? (
+                <a
+                    href={slidesUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 rounded-full border border-indigo-200 px-3 py-1 text-indigo-700 transition hover:bg-indigo-50"
+                >
+                    <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4"/>
+                    </svg>
+                    Slides
+                </a>
+            ) : showSlidesComingSoon ? (
+                placeholderButton("Slides")
+            ) : null}
+
+            {recordingUrl ? (
+                <a
+                    href={recordingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 rounded-full border border-indigo-200 px-3 py-1 text-indigo-700 transition hover:bg-indigo-50"
+                >
+                    <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M10 9l5 3-5 3V9z"/>
+                    </svg>
+                    Recording
+                </a>
+            ) : showRecordingComingSoon ? (
+                placeholderButton("Recording")
+            ) : null}
+        </div>
+    );
+};
 
 const programmeSchedule: Array<[string, string]> = [
     ["09:00 – 09:30", "Opening Remarks"],
@@ -468,6 +574,9 @@ export default function Workshop() {
                                     {programmeSchedule.map(([time, event], i) => {
                                         const isKeynote = event.startsWith("Keynote Talk:");
                                         const isInvited = event.includes("Invited Paper Presentations");
+                                        const talkDetails = isKeynote
+                                            ? keynoteTalks.find((talk) => event.includes(talk.speaker))
+                                            : undefined;
 
                                         return (
                                             <tr key={i} className="odd:bg-white even:bg-indigo-50/40 align-top">
@@ -477,12 +586,21 @@ export default function Workshop() {
                                                 <td className="px-6 py-4 align-top text-base text-gray-900">
                                                     <div className="space-y-4">
                                                         {isKeynote ? (
-                                                            <span className="inline-flex items-baseline gap-2 whitespace-nowrap font-semibold text-indigo-800">
-                                                                <span className="rounded-full bg-indigo-600/15 px-2 py-1 text-xs font-bold uppercase tracking-wide text-indigo-700">
-                                                                    Keynote
+                                                            <div className="flex flex-wrap items-center gap-3">
+                                                                <span className="inline-flex items-baseline gap-2 whitespace-nowrap font-semibold text-indigo-800">
+                                                                    <span className="rounded-full bg-indigo-600/15 px-2 py-1 text-xs font-bold uppercase tracking-wide text-indigo-700">
+                                                                        Keynote
+                                                                    </span>
+                                                                    {event.replace("Keynote Talk:", "").trim()}
                                                                 </span>
-                                                                {event.replace("Keynote Talk:", "").trim()}
-                                                            </span>
+                                                                <ResourceLinks
+                                                                    slidesUrl={talkDetails?.slides}
+                                                                    showSlidesComingSoon={talkDetails?.slidesComingSoon}
+                                                                    recordingUrl={talkDetails?.recordingUrl}
+                                                                    showRecordingComingSoon={talkDetails?.recordingComingSoon}
+                                                                    inline
+                                                                />
+                                                            </div>
                                                         ) : (
                                                             !isInvited && (
                                                                 <span className="font-semibold text-gray-900">
@@ -509,14 +627,22 @@ export default function Workshop() {
                                                                 <ul className="space-y-1 leading-relaxed">                                                            
                                                                     {invitedPapers.map((paper, j) => (
                                                                         <li key={j} className="space-y-1">
-                                                                            <a
-                                                                                href={paper.url}
-                                                                                target="_blank"
-                                                                                rel="noopener noreferrer"
-                                                                                className="font-semibold text-amber-700 hover:text-amber-800 hover:underline"
-                                                                            >
-                                                                                {paper.title}
-                                                                            </a>
+                                                                            <div className="flex flex-wrap items-center gap-2">
+                                                                                <a
+                                                                                    href={paper.url}
+                                                                                    target="_blank"
+                                                                                    rel="noopener noreferrer"
+                                                                                    className="font-semibold text-amber-700 hover:text-amber-800 hover:underline"
+                                                                                >
+                                                                                    {paper.title}
+                                                                                </a>
+                                                                                <ResourceLinks
+                                                                                    slidesUrl={paper.slides}
+                                                                                    showSlidesComingSoon={!paper.slides}
+                                                                                    showRecordingComingSoon
+                                                                                    inline
+                                                                                />
+                                                                            </div>
                                                                             <div className="text-sm italic text-gray-600 md:text-base">
                                                                                 {paper.authors}
                                                                             </div>
